@@ -8,6 +8,8 @@ import javax.swing.*;
 
 public class MemberLoginUI {
 
+	 private JTextField textField;
+	
 	// btn 패널에 버튼 추가 함수
 	private void addButtonToPanel(JPanel panel, JButton button, int x, int y) {
 	    GridBagConstraints gbc = new GridBagConstraints();
@@ -49,7 +51,7 @@ public class MemberLoginUI {
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
 		JPanel btnPanel = new JPanel(); //버튼 패널
-		JTextField textField = new JTextField();
+		textField = new JTextField();
 		
 		panel.setBackground(Color.CYAN); //흰색 RGB코드, 불투명하게
 		
@@ -67,6 +69,7 @@ public class MemberLoginUI {
 		textField.setBackground(Color.LIGHT_GRAY);
 		textField.setSize(300,50);
 		textField.setLocation(300, 200);
+		textField.setEditable(false);
 		frame.add(textField);
 		
 		JButton num1 = new JButton("1");
@@ -130,6 +133,86 @@ public class MemberLoginUI {
 			}
 		});
 		
+		num0.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        textField.setText(textField.getText() + "0");
+		    }
+		});
+		
+		num1.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        textField.setText(textField.getText() + "1");
+		    }
+		});
+		
+		num2.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        textField.setText(textField.getText() + "2");
+		    }
+		});
+		
+		num3.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        textField.setText(textField.getText() + "3");
+		    }
+		});
+		
+		num4.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        textField.setText(textField.getText() + "4");
+		    }
+		});
+		
+		num5.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        textField.setText(textField.getText() + "5");
+		    }
+		});
+		
+		num6.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        textField.setText(textField.getText() + "6");
+		    }
+		});
+		
+		num7.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        textField.setText(textField.getText() + "7");
+		    }
+		});
+		
+		num8.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        textField.setText(textField.getText() + "8");
+		    }
+		});
+		
+		num9.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        textField.setText(textField.getText() + "9");
+		    }
+		});
+		
+		clearButton.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        textField.setText("");
+		    }
+		});
+		
+		delButton.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		    	int t = textField.getText().length();
+		    	
+		    	if ( t==0) {
+		    		textField.setText("");
+		    	}
+		    	else if (t >= 1 ) {
+		    		String text = textField.getText().substring(0, t - 1); //l1의 글자를 끝에 하나를 자르는 substring 함수
+                    textField.setText(text);
+		    	}
+		    	
+		    }
+		});
 		
 	}
 	

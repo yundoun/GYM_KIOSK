@@ -13,7 +13,7 @@ public class mainUI {
 
 	public mainUI() {
 		
-		String UserName = null;
+		String UserName = "null";
 		
 		JLabel titleLabel = new JLabel("ZYM CARRY");
 		JPanel guidePanel = new JPanel();
@@ -35,14 +35,14 @@ public class mainUI {
 		titleLabel.setBackground(Color.WHITE);
 		titleLabel.setFont(new Font("맑은 고딕", Font.BOLD, 40)); //제목 라벨 글씨체, 굵기, 크기 설정
 		titleLabel.setSize(300,50); //제목 라벨 크기 설정
-		titleLabel.setLocation(30, 50); //제목 라벨 위치 설정
+		titleLabel.setLocation(300, 50); //제목 라벨 위치 설정
 		titleLabel.setHorizontalAlignment(JLabel.CENTER); //가운데 정렬
 		frame.add(titleLabel); //제목 라벨 출력
 		
 		guidePanel.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
 		guidePanel.setBackground(Color.WHITE);
-		guidePanel.setSize(300, 300);
-		guidePanel.setLocation(30,200);
+		guidePanel.setSize(300, 50);
+		guidePanel.setLocation(300,110);
 		frame.add(guidePanel);
 		
 		// 여백 레이블
@@ -71,7 +71,7 @@ public class mainUI {
 		
 		
 		trainerProfileButton.setSize(400,100);
-		trainerProfileButton.setLocation(30, 520);
+		trainerProfileButton.setLocation(300, 520);
 		trainerProfileButton.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
 		trainerProfileButton.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
 		trainerProfileButton.setContentAreaFilled(false); //버튼 영역 채우지 않음
@@ -84,7 +84,7 @@ public class mainUI {
 		buyTicketButton.setContentAreaFilled(false); //버튼 영역 채우지 않음
 		frame.add(buyTicketButton); //버튼 출력
 		
-		ptConsultantResevationButton.setSize(400, 100);
+		ptConsultantResevationButton.setSize(300, 50);
 		ptConsultantResevationButton.setLocation(30, 760);
 		ptConsultantResevationButton.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
 		ptConsultantResevationButton.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
