@@ -24,8 +24,8 @@ public class buyTicketUI {
 		
 		JLabel titleLabel = new JLabel("ZYM CARRY"); //로그인창을 알려주는 로그인 라벨
 		JLabel guideLabel = new JLabel("이용권 선택");
-		JLabel termTicket = new JLabel("기간권");
-		JLabel dayTicket = new JLabel("일일권");
+		JLabel termTicketLabel = new JLabel("기간권");
+		JLabel dayTicketLabel = new JLabel("일일권");
 		JButton cancelButton = new JButton("취소");
 		
 		JFrame frame = new JFrame();
@@ -121,21 +121,21 @@ public class buyTicketUI {
 		guideLabel.setHorizontalAlignment(JLabel.CENTER);
 		frame.add(guideLabel); //로그인 라벨 출력
 		
-		termTicket.setOpaque(true);
-		termTicket.setBackground(Color.CYAN);
-		termTicket.setFont(new Font("맑은 고딕", Font.BOLD, 20)); //로그인 라벨 글씨체, 굵기, 크기 설정
-		termTicket.setSize(150,40); //로그인 라벨 크기 설정
-		termTicket.setLocation(200, 250); //로그인 라벨 위치 설정
-		termTicket.setHorizontalAlignment(JLabel.CENTER);
-		frame.add(termTicket); //로그인 라벨 출력
+		termTicketLabel.setOpaque(true);
+		termTicketLabel.setBackground(Color.CYAN);
+		termTicketLabel.setFont(new Font("맑은 고딕", Font.BOLD, 20)); //로그인 라벨 글씨체, 굵기, 크기 설정
+		termTicketLabel.setSize(150,40); //로그인 라벨 크기 설정
+		termTicketLabel.setLocation(200, 250); //로그인 라벨 위치 설정
+		termTicketLabel.setHorizontalAlignment(JLabel.CENTER);
+		frame.add(termTicketLabel); //로그인 라벨 출력
 		
-		dayTicket.setOpaque(true);
-		dayTicket.setBackground(Color.CYAN);
-		dayTicket.setFont(new Font("맑은 고딕", Font.BOLD, 20)); //로그인 라벨 글씨체, 굵기, 크기 설정
-		dayTicket.setSize(150,40); //로그인 라벨 크기 설정
-		dayTicket.setLocation(200, 500); //로그인 라벨 위치 설정
-		dayTicket.setHorizontalAlignment(JLabel.CENTER);
-		frame.add(dayTicket); //로그인 라벨 출력
+		dayTicketLabel.setOpaque(true);
+		dayTicketLabel.setBackground(Color.CYAN);
+		dayTicketLabel.setFont(new Font("맑은 고딕", Font.BOLD, 20)); //로그인 라벨 글씨체, 굵기, 크기 설정
+		dayTicketLabel.setSize(150,40); //로그인 라벨 크기 설정
+		dayTicketLabel.setLocation(200, 500); //로그인 라벨 위치 설정
+		dayTicketLabel.setHorizontalAlignment(JLabel.CENTER);
+		frame.add(dayTicketLabel); //로그인 라벨 출력
 		
 		
 		
@@ -154,55 +154,59 @@ public class buyTicketUI {
 
 		mon1btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//로그인 버튼
-				
+				frame.setVisible(false);
+				new lockerUI();
 			}
 		});
 		
 		mon3btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//로그인 버튼
-				
+				frame.setVisible(false);
+				new lockerUI();
 			}
 		});
 		
 		mon6btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//로그인 버튼
-				
+				frame.setVisible(false);
+				new lockerUI();
 			}
 		});
 		
 		mon12btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//로그인 버튼
-//				frame.setVisible(false);
+	
+				frame.setVisible(false);
+				new lockerUI();
 			}
 		});
 		
 		no1btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//로그인 버튼
-				
+				frame.setVisible(false);
+				new lockerUI();	
 			}
 		});
 		
 		no3btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//로그인 버튼
+				frame.setVisible(false);
+				new lockerUI();
 				
 			}
 		});
 		
 		no10btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//로그인 버튼
+				frame.setVisible(false);
+				new lockerUI();
 			}
 		});
 		
 		no20btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//로그인 버튼
+				frame.setVisible(false);
+				new lockerUI();
 			}
 		});
 		
