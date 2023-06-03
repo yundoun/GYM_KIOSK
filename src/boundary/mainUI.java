@@ -33,7 +33,7 @@ public class mainUI {
 		
 		titleLabel.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
 		titleLabel.setBackground(Color.WHITE);
-		titleLabel.setFont(new Font("맑은 고딕", Font.BOLD, 40)); //제목 라벨 글씨체, 굵기, 크기 설정
+		titleLabel.setFont(new Font("맑은 고딕", Font.BOLD, 20)); //제목 라벨 글씨체, 굵기, 크기 설정
 		titleLabel.setSize(300,50); //제목 라벨 크기 설정
 		titleLabel.setLocation(300, 50); //제목 라벨 위치 설정
 		titleLabel.setHorizontalAlignment(JLabel.CENTER); //가운데 정렬
@@ -41,7 +41,7 @@ public class mainUI {
 		
 		guidePanel.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
 		guidePanel.setBackground(Color.WHITE);
-		guidePanel.setSize(300, 50);
+		guidePanel.setSize(300, 200);
 		guidePanel.setLocation(300,110);
 		frame.add(guidePanel);
 		
@@ -53,8 +53,8 @@ public class mainUI {
 		JLabel space3 = new JLabel("                                                     ");
 		space3.setFont(new Font("맑은 고딕", Font.BOLD, 40));
 		
-		label1.setFont(new Font("맑은 고딕", Font.BOLD, 30));	
-		label2.setFont(new Font("맑은 고딕", Font.BOLD, 30));
+		label1.setFont(new Font("맑은 고딕", Font.BOLD, 20));	
+		label2.setFont(new Font("맑은 고딕", Font.BOLD, 20));
 		
 		
 		guidePanel.add(space1);
@@ -71,21 +71,21 @@ public class mainUI {
 		
 		
 		trainerProfileButton.setSize(400,100);
-		trainerProfileButton.setLocation(300, 520);
+		trainerProfileButton.setLocation(250, 350);
 		trainerProfileButton.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
 		trainerProfileButton.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
 		trainerProfileButton.setContentAreaFilled(false); //버튼 영역 채우지 않음
 		frame.add(trainerProfileButton); //버튼 출력
 		
 		buyTicketButton.setSize(400, 100);
-		buyTicketButton.setLocation(30, 640);
+		buyTicketButton.setLocation(250, 480);
 		buyTicketButton.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
 		buyTicketButton.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
 		buyTicketButton.setContentAreaFilled(false); //버튼 영역 채우지 않음
 		frame.add(buyTicketButton); //버튼 출력
 		
-		ptConsultantResevationButton.setSize(300, 50);
-		ptConsultantResevationButton.setLocation(30, 760);
+		ptConsultantResevationButton.setSize(400, 100);
+		ptConsultantResevationButton.setLocation(250, 610);
 		ptConsultantResevationButton.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
 		ptConsultantResevationButton.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
 		ptConsultantResevationButton.setContentAreaFilled(false); //버튼 영역 채우지 않음
