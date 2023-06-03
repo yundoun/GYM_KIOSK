@@ -11,7 +11,7 @@ import Btn_Design.*;
 public class lockerUI {
 	
 	public lockerUI() {
-		RoundedButton won = new RoundedButton("1");
+		RoundedButton one = new RoundedButton("1");
 		RoundedButton two = new RoundedButton("2");
 		RoundedButton three = new RoundedButton("3");
 		RoundedButton four = new RoundedButton("4");
@@ -20,165 +20,218 @@ public class lockerUI {
 		RoundedButton seven = new RoundedButton("7");
 		RoundedButton eight = new RoundedButton("8");
 		RoundedButton nine = new RoundedButton("9");
-		RoundedButton okbtn = new RoundedButton("확인");
-		RoundedButton canclebtn = new RoundedButton("취소");
+		JButton okButton = new JButton("확인");
+		JButton cancelButton = new JButton("취소");
 		
 		
-		
-		JLabel Label1 = new JLabel("ZYM CARRY"); //로그인창을 알려주는 로그인 라벨
-		JLabel Label2 = new JLabel("락커 선택");
+		JLabel titleLabel = new JLabel("ZYM CARRY"); //로그인창을 알려주는 로그인 라벨
+		JLabel guideLabel = new JLabel("락커 선택");
 		
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
-		JPanel backpanle = new JPanel();
-		JPanel btnPanel = new JPanel(); //버튼 패널
+		JPanel btnPanel = new JPanel();
+		
 		
 		panel.setBackground(Color.CYAN); //흰색 RGB코드, 불투명하게
-		backpanle.setOpaque(true);
-		backpanle.setBackground(Color.WHITE);
-		backpanle.setSize(700,700); //로그인 라벨 크기 설정
-		backpanle.setLocation(90, 220);
+		btnPanel.setOpaque(true);
+		btnPanel.setBackground(Color.WHITE);
+		btnPanel.setSize(700,500); //로그인 라벨 크기 설정
+		btnPanel.setLocation(100, 220);
 		
 		
-		btnPanel.add(won); 
-		btnPanel.add(two);
-		btnPanel.add(three);
-		btnPanel.add(four);
-		btnPanel.add(five);
-		btnPanel.add(six);
-		btnPanel.add(seven);
-		btnPanel.add(eight);
-		btnPanel.add(nine);
-		btnPanel.add(okbtn);
-		btnPanel.add(canclebtn);
 		
+		one.setSize(80,80);
+		one.setLocation(200, 250);
+		one.setBorderPainted(false); //테두리(외곽선) 없앰
+		one.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
+		one.setContentAreaFilled(false); //영역 채우지 않음
+		frame.add(one); 
 		
-		won.setSize(110,110);
-		won.setLocation(180, 350);
-		won.setBorderPainted(false); //테두리(외곽선) 없앰
-		won.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		won.setContentAreaFilled(false); //영역 채우지 않음
-		frame.add(won); 
-		
-		two.setSize(110,110);
-		two.setLocation(380, 350);
+		two.setSize(80,80);
+		two.setLocation(400, 250);
 		two.setBorderPainted(false); //테두리(외곽선) 없앰
 		two.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		two.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(two); 
 		
-		three.setSize(110,110);
-		three.setLocation(580, 350);
+		three.setSize(80,80);
+		three.setLocation(600, 250);
 		three.setBorderPainted(false); //테두리(외곽선) 없앰
 		three.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		three.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(three); 
 		
-		four.setSize(110,110);
-		four.setLocation(180, 500);
+		four.setSize(80,80);
+		four.setLocation(200, 400);
 		four.setBorderPainted(false); //테두리(외곽선) 없앰
 		four.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		four.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(four); 
 		
-		five.setSize(110,110);
-		five.setLocation(380, 500);
+		five.setSize(80,80);
+		five.setLocation(400, 400);
 		five.setBorderPainted(false); //테두리(외곽선) 없앰
 		five.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		five.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(five); 
 		
-		six.setSize(110,110);
-		six.setLocation(580, 500);
+		six.setSize(80,80);
+		six.setLocation(600, 400);
 		six.setBorderPainted(false); //테두리(외곽선) 없앰
 		six.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		six.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(six); 
 		
-		seven.setSize(110,110);
-		seven.setLocation(180, 650);
+		seven.setSize(80,80);
+		seven.setLocation(200, 550);
 		seven.setBorderPainted(false); //테두리(외곽선) 없앰
 		seven.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		seven.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(seven); 
 		
-		eight.setSize(110,110);
-		eight.setLocation(380, 650);
+		eight.setSize(80,80);
+		eight.setLocation(400, 550);
 		eight.setBorderPainted(false); //테두리(외곽선) 없앰
 		eight.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		eight.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(eight); 
 
-		nine.setSize(110,110);
-		nine.setLocation(580, 650);
+		nine.setSize(80,80);
+		nine.setLocation(600, 550);
 		nine.setBorderPainted(false); //테두리(외곽선) 없앰
 		nine.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		nine.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(nine); 
 		
-		okbtn.setSize(150,40);
-		okbtn.setLocation(270, 800);
-		okbtn.setBorderPainted(false); //테두리(외곽선) 없앰
-		okbtn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		okbtn.setContentAreaFilled(false); //영역 채우지 않음
-		frame.add(okbtn);
+		okButton.setSize(150,40);
+		okButton.setLocation(270, 670);
+		okButton.setBorderPainted(false); //테두리(외곽선) 없앰
+		okButton.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
+		okButton.setContentAreaFilled(true); // 영역 채우기 활성화
+		okButton.setBackground(Color.orange);
+		frame.add(okButton);
 		
-		canclebtn.setSize(150,40);
-		canclebtn.setLocation(450, 800);
-		canclebtn.setBorderPainted(false); //테두리(외곽선) 없앰
-		canclebtn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		canclebtn.setContentAreaFilled(false); //영역 채우지 않음
-		frame.add(canclebtn);
+		cancelButton.setSize(150,40);
+		cancelButton.setLocation(450, 670);
+		cancelButton.setBorderPainted(false); //테두리(외곽선) 없앰
+		cancelButton.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
+		cancelButton.setContentAreaFilled(true); // 영역 채우기 활성화
+		cancelButton.setBackground(Color.orange);
+		frame.add(cancelButton);
 			
 		
-		Label1.setOpaque(true);
-		Label1.setBackground(Color.white);
-		Label1.setFont(new Font("맑은 고딕", Font.BOLD, 40)); //로그인 라벨 글씨체, 굵기, 크기 설정
-		Label1.setSize(450,80); //로그인 라벨 크기 설정
-		Label1.setLocation(220, 50); //로그인 라벨 위치 설정
-		Label1.setHorizontalAlignment(JLabel.CENTER);
-		frame.add(Label1); //로그인 라벨 출력
+		titleLabel.setOpaque(true);
+		titleLabel.setBackground(Color.white);
+		titleLabel.setFont(new Font("맑은 고딕", Font.BOLD, 20)); //로그인 라벨 글씨체, 굵기, 크기 설정
+		titleLabel.setSize(300,50); //로그인 라벨 크기 설정
+		titleLabel.setLocation(300, 50); //로그인 라벨 위치 설정
+		titleLabel.setHorizontalAlignment(JLabel.CENTER);
+		frame.add(titleLabel); //로그인 라벨 출력
 		
-		Label2.setOpaque(true);
-		Label2.setBackground(Color.white);
-		Label2.setFont(new Font("맑은 고딕", Font.BOLD, 32)); //로그인 라벨 글씨체, 굵기, 크기 설정
-		Label2.setSize(450,80); //로그인 라벨 크기 설정
-		Label2.setLocation(220, 150); //로그인 라벨 위치 설정
-		Label2.setHorizontalAlignment(JLabel.CENTER);
-		frame.add(Label2); //로그인 라벨 출력
+		guideLabel.setOpaque(true);
+		guideLabel.setBackground(Color.white);
+		guideLabel.setFont(new Font("맑은 고딕", Font.BOLD, 20)); //로그인 라벨 글씨체, 굵기, 크기 설정
+		guideLabel.setSize(300,50); //로그인 라벨 크기 설정
+		guideLabel.setLocation(300, 110); //로그인 라벨 위치 설정
+		guideLabel.setHorizontalAlignment(JLabel.CENTER);
+		frame.add(guideLabel); //로그인 라벨 출력
 	
 		
-		frame.add(backpanle);
+		frame.add(btnPanel);
 		frame.add(panel);
 		
 		
 		frame.setResizable(false); //창 크기 조절 불가
 		frame.setVisible(true); //창을 화면에 나타낼 것인지 설정
-		frame.setSize(900, 1000); //창 크기 설정
+		frame.setSize(900, 800); //창 크기 설정
 		frame.setPreferredSize(new Dimension(1920,1080)); //Dimension객체를 인자로 받으면서 해당 컴포넌트 기본크기를 결정
 		frame.setLocationRelativeTo(null); //화면을 중간에 띄움
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //창닫기 버튼을 활성화 시켜 X를 누르면 프로그램 종료
 		
 		//이벤트 처리 추가
 
-		won.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						//로그인 버튼
-						frame.setVisible(false);
-					}
-				});
+		one.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				new paymentUI();
+			}
+		});
 		
-		okbtn.addActionListener(new ActionListener() {
+		two.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				new paymentUI();
+			}
+		});
+		
+		three.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				new paymentUI();
+			}
+		});
+		
+		four.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				new paymentUI();
+			}
+		});
+		
+		five.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				new paymentUI();
+			}
+		});
+		
+		six.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				new paymentUI();
+			}
+		});
+		
+		seven.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				new paymentUI();
+			}
+		});
+		
+		eight.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				new paymentUI();
+			}
+		});
+		
+		nine.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				new paymentUI();
+			}
+		});
+		
+		
+		
+		
+		
+		
+		okButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//로그인 버튼
 				frame.setVisible(false);
 			}
 		});
 		
-		canclebtn.addActionListener(new ActionListener() {
+		cancelButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//로그인 버튼
 				frame.setVisible(false);
+				frame.dispose();
+//				JOptionPane.showMessageDialog(null, "처음으로 돌아갑니다.", "안내", JOptionPane.WARNING_MESSAGE);
+				new buyTicketUI();
 			}
 		});
 		

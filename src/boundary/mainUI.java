@@ -113,6 +113,7 @@ public class mainUI {
 			public void actionPerformed(ActionEvent e) {
 				JButton b = (JButton)e.getSource();
 				
+				JOptionPane.showMessageDialog(null, "미구현 기능입니다.", "안내", JOptionPane.WARNING_MESSAGE);
 				//트레이너 프로필 조회 버튼
 			}
 		});
@@ -128,7 +129,7 @@ public class mainUI {
 		ptConsultantResevationButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//PT 상담 예약 버튼
-				
+				JOptionPane.showMessageDialog(null, "미구현 기능입니다.", "안내", JOptionPane.WARNING_MESSAGE);
 			}
 		});
 	}
