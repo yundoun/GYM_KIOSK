@@ -8,9 +8,9 @@ import javax.swing.*;
 import Btn_Design.*;
 
 // 회원 로그인
-public class StartUI {
+public class startUI {
 	
-	public StartUI() {
+	public startUI() {
 		RoundedButton managerbtn = new RoundedButton("관리자 모드"); // 관리자 버튼
 		RoundedButton regbtn = new RoundedButton("신규회원/전화번호로 시작"); // 회원가입 버튼
 		RoundedButton loginbtn = new RoundedButton("기존회원/로그인"); // 로그인 버튼
@@ -75,7 +75,7 @@ public class StartUI {
 			public void actionPerformed(ActionEvent e) {
 				//로그인 버튼
 				frame.setVisible(false);
-				new MemberLoginUI();
+				new memberLoginUI();
 			}
 		});
 		

@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 
-public class MemberLoginUI {
+public class memberLoginUI {
 
 	 private JTextField textField;
 	
@@ -46,7 +46,7 @@ public class MemberLoginUI {
 	}
 	
 	
-	public MemberLoginUI() {
+	public memberLoginUI() {
 
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
@@ -125,13 +125,7 @@ public class MemberLoginUI {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //창닫기 버튼을 활성화 시켜 X를 누르면 프로그램 종료
 	
 		
-		okButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				//로그인 버튼
-				frame.setVisible(false);
-				new mainUI();
-			}
-		});
+
 		
 		num0.addActionListener(new ActionListener() {
 		    public void actionPerformed(ActionEvent e) {
@@ -211,6 +205,25 @@ public class MemberLoginUI {
                     textField.setText(text);
 		    	}
 		    	
+		    }
+		});
+		
+		okButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//로그인 버튼
+				frame.setVisible(false);
+				new mainUI();
+			}
+		});
+		
+
+		
+		cancelButton.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		        // Close the frame and go back to the startUI
+		    	frame.setVisible(false);
+		        frame.dispose();
+		        new startUI();
 		    }
 		});
 		
