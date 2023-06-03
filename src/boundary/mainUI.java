@@ -120,7 +120,8 @@ public class mainUI {
 		buyTicketButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//이용권 구매 버튼
-				
+				frame.setVisible(false);
+				new buyTicketUI();
 			}
 		});
 		

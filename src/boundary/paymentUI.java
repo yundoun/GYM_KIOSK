@@ -6,11 +6,11 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 import javax.swing.JButton;
 
-public class selectTicketUI {
+public class paymentUI {
 	
 	
 	
-	public selectTicketUI() {
+	public paymentUI() {
 		
 		JLabel titleLabel = new JLabel("ZYM CARRY");
 		JLabel guideLabel = new JLabel("결제확인");
@@ -115,6 +115,12 @@ public class selectTicketUI {
 		            // Cancel button clicked
 		            // Perform actions accordingly
 		        }
+		    }
+		});
+		
+		cancelButton.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		    	frame.dispose();
 		    }
 		});
 		
