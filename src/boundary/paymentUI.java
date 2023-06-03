@@ -51,7 +51,7 @@ public class paymentUI {
 		
         
         // 이미지 파일 경로 지정
-        String imagePath = "C:\\Users\\USER_20211207\\Desktop\\payment.jpg";
+        String imagePath = "src/images/payment.png";
         
         // 이미지 아이콘 생성
         ImageIcon imageIcon = new ImageIcon(imagePath);
@@ -111,6 +111,10 @@ public class paymentUI {
 		        if (choice == JOptionPane.OK_OPTION) {
 		            // OK button clicked
 		            // Perform actions accordingly
+		        	 JOptionPane.showMessageDialog(null, "결제가 완료되었습니다 !!");
+		        	 frame.dispose();
+		        	 new startUI();
+		        	
 		        } else if (choice == JOptionPane.CANCEL_OPTION) {
 		            // Cancel button clicked
 		            // Perform actions accordingly
@@ -120,7 +124,10 @@ public class paymentUI {
 		
 		cancelButton.addActionListener(new ActionListener() {
 		    public void actionPerformed(ActionEvent e) {
-		    	frame.dispose();
+				frame.setVisible(false);
+				frame.dispose();
+				JOptionPane.showMessageDialog(null, "처음으로 돌아갑니다.", "안내", JOptionPane.WARNING_MESSAGE);
+				new mainUI();
 		    }
 		});
 		
