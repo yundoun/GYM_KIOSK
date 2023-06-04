@@ -30,19 +30,19 @@ public class registerNewMemberUI {
 		JTextField birthTextField = new JTextField(15);
 		JTextField sexTextField = new JTextField(17);
 		
-		RoundedButton okButton = new RoundedButton("확인");
-		RoundedButton backButton = new RoundedButton("취소");
+		JButton okButton = new JButton("확인");
+		JButton cancelButton = new JButton("취소");
 		
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
 		JPanel subPanel = new JPanel();
-		JPanel btnPanel = new JPanel(); //버튼 패널
+		
 		
 		panel.setBackground(Color.CYAN);
 		
 		titleLabel.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
 		titleLabel.setBackground(Color.WHITE);
-		titleLabel.setFont(new Font("맑은 고딕", Font.BOLD, 40)); //제목 라벨 글씨체, 굵기, 크기 설정
+		titleLabel.setFont(new Font("맑은 고딕", Font.BOLD, 20)); //제목 라벨 글씨체, 굵기, 크기 설정
 		titleLabel.setSize(300,50); //제목 라벨 크기 설정
 		titleLabel.setLocation(300, 50); //제목 라벨 위치 설정
 		titleLabel.setHorizontalAlignment(JLabel.CENTER); //가운데 정렬
@@ -50,7 +50,7 @@ public class registerNewMemberUI {
 		
 		guideLabel.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
 		guideLabel.setBackground(Color.WHITE);
-		guideLabel.setFont(new Font("맑은 고딕", Font.BOLD, 40)); //회원 등록 라벨 글씨체, 굵기, 크기 설정
+		guideLabel.setFont(new Font("맑은 고딕", Font.BOLD, 20)); //회원 등록 라벨 글씨체, 굵기, 크기 설정
 		guideLabel.setSize(300,50); //회원 등록 라벨 크기 설정
 		guideLabel.setLocation(300, 110); //회원 등록 라벨 위치 설정
 		guideLabel.setHorizontalAlignment(JLabel.CENTER); //가운데 정렬
@@ -89,16 +89,16 @@ public class registerNewMemberUI {
 		subPanel.setBorder(BorderFactory.createEmptyBorder(10 , 10 , 10 , 10)); //상하좌우 10씩 띄우기
 		
 		nameLabel.setFont(new Font("맑은 고딕", Font.BOLD, 20));
-		nameLabel.setBorder(new LineBorder(Color.black, 1, true)); // 외곽선 설정
+//		nameLabel.setBorder(new LineBorder(Color.black, 1, true)); // 외곽선 설정
 		
 		phoneLabel.setFont(new Font("맑은 고딕", Font.BOLD, 20));
-		phoneLabel.setBorder(new LineBorder(Color.black, 1, true)); // 외곽선 설정
+//		phoneLabel.setBorder(new LineBorder(Color.black, 1, true)); // 외곽선 설정
 		
 		birthLabel.setFont(new Font("맑은 고딕", Font.BOLD, 20));
-		birthLabel.setBorder(new LineBorder(Color.black, 1, true)); // 외곽선 설정
+//		birthLabel.setBorder(new LineBorder(Color.black, 1, true)); // 외곽선 설정
 		
 		sexLabel.setFont(new Font("맑은 고딕", Font.BOLD, 20));
-		sexLabel.setBorder(new LineBorder(Color.black, 1, true)); // 외곽선 설정
+//		sexLabel.setBorder(new LineBorder(Color.black, 1, true)); // 외곽선 설정
 		
 		nameTextField.setFont(new Font("맑은 고딕", Font.BOLD, 20));
 		
@@ -109,23 +109,22 @@ public class registerNewMemberUI {
 		sexTextField.setFont(new Font("맑은 고딕", Font.BOLD, 20));
 		
 		
-		btnPanel.add(okButton); // 확인 버튼
-		btnPanel.add(backButton); // 취소 버튼
-		
-		
-		okButton.setSize(50,50);
+	
+		okButton.setSize(70,50);
 		okButton.setLocation(300, 500);
 		okButton.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
 		okButton.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
-		okButton.setContentAreaFilled(false); //버튼 영역 채우지 않음
-		frame.add(okButton); //버튼 출력
+		okButton.setContentAreaFilled(true); //버튼 영역 활성화
+		okButton.setBackground(Color.orange);
+		subPanel.add(okButton); //버튼 출력
 		
-		backButton.setSize(110, 50);
-		backButton.setLocation(500, 500);
-		backButton.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
-		backButton.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
-		backButton.setContentAreaFilled(false); //버튼 영역 채우지 않음
-		frame.add(backButton); //버튼 출력
+		cancelButton.setSize(70, 50);
+		cancelButton.setLocation(500, 500);
+		cancelButton.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
+		cancelButton.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
+		cancelButton.setContentAreaFilled(true); //버튼 영역 활성화
+		cancelButton.setBackground(Color.orange);
+		subPanel.add(cancelButton); //버튼 출력
 		
 	
 		
@@ -151,14 +150,29 @@ public class registerNewMemberUI {
 			public void actionPerformed(ActionEvent e) {
 				JButton b = (JButton)e.getSource();
 				
-				//확인 버튼
+		        int choice = JOptionPane.showOptionDialog(frame, "이름 : 윤도운\n전화번호 : 6974\n생년월일 : 000609\n성별 : 남\n\n입력하신 회원 정보가 맞으십니까?",
+		        		"회원정보확인", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+		        if (choice == JOptionPane.OK_OPTION) {
+		            // OK button clicked
+		            // Perform actions accordingly
+		        	 JOptionPane.showMessageDialog(null, "회원가입이 완료되었습니다 !!");
+		        	 frame.dispose();
+		        	 new startUI();
+		        	
+		        } else if (choice == JOptionPane.CANCEL_OPTION) {
+		            // Cancel button clicked
+		            // Perform actions accordingly
+		        }
+				
 			}
 		});
 		
-		backButton.addActionListener(new ActionListener() {
+		cancelButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//뒤로가기 버튼
 				frame.setVisible(false);
+				frame.dispose();
+				new startUI();
 			}
 		});
 	}
