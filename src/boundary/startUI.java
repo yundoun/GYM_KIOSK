@@ -29,11 +29,13 @@ public class startUI {
 		btnPanel.add(regbtn); //회원가입 버튼
 		
 		
-		managerbtn.setSize(110,50);
-		managerbtn.setLocation(400, 700);
+		managerbtn.setSize(200,50);
+		managerbtn.setLocation(350, 600);
 		managerbtn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
 		managerbtn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
-		managerbtn.setContentAreaFilled(false); //관리자 버튼 영역 채우지 않음
+		managerbtn.setContentAreaFilled(true); //관리자 버튼 영역 채우지 않음
+		managerbtn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		managerbtn.setBackground(Color.orange);
 		frame.add(managerbtn); //관리자 버튼 출력
 		
 		regbtn.setSize(300, 100);
@@ -41,8 +43,9 @@ public class startUI {
 		regbtn.setBorderPainted(false); //회원가입 버튼 테두리(외곽선) 없앰
 		regbtn.setFocusPainted(false); //회원가입 버튼이 선택되었을 때 생기는 테두리 사용 안함
 		regbtn.setContentAreaFilled(false); //회원가입 버튼 영역 채우지 않음
-		frame.add(regbtn); //취소 버튼 출력
+		frame.add(regbtn); 
 		
+	
 		loginbtn.setSize(300, 100);
 		loginbtn.setLocation(300, 450);
 		loginbtn.setBorderPainted(false); //로그인 버튼 테두리(외곽선) 없앰
@@ -84,7 +87,9 @@ public class startUI {
 		managerbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
-				new managerModeUI();
+				new memberLoginUI();
+				
+				
 
 				
 			}

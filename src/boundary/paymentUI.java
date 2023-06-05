@@ -51,7 +51,7 @@ public class paymentUI {
 		
         
         // 이미지 파일 경로 지정
-        String imagePath = "src/images/payment.png";
+        String imagePath = "images/payment.png";
         
         // 이미지 아이콘 생성
         ImageIcon imageIcon = new ImageIcon(imagePath);
