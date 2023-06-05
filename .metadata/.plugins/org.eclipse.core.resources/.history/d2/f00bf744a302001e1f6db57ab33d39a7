@@ -1,0 +1,107 @@
+package boundary;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+public class AccessDB {
+	
+	Connection con = null;
+	Statement stmt = null;
+
+	public AccessDB() {
+		// TODO Auto-generated method stub
+		String databaseURL = "jdbc:ucanaccess://Database1.accdb";
+
+		
+		try {
+			con = DriverManager.getConnection(databaseURL);
+			stmt = con.createStatement();
+			
+			System.out.print("Connect");
+		}	catch(SQLException e) {
+			e.printStackTrace();
+			System.out.print("UnConnect");
+		}
+		
+	}
+	
+	public boolean logincheck(String _i, String _p) {
+		boolean flag = false;
+		
+		String id = _i;
+		String pw = _p;
+		
+		try {
+			String checkingStr = "SELECT userPassword, loginCheck FROM user WHERE userID='" + id + "'";
+			String loginupdate = "UPDATE user SET loginCheck = 1 WHERE userID = '" + id + "'";
+			ResultSet result = stmt.executeQuery(checkingStr);
+			PreparedStatement pstmt = con.prepareStatement(loginupdate); //로그인 체크 1로 업데이트
+			
+			int count = 0;
+			while(result.next()) {
+				if(pw.equals(result.getString("userPassword"))) {
+					flag = true;
+					pstmt.executeUpdate(loginupdate);
+					System.out.println("로그인 성공");
+				}
+				
+				else {
+					flag = false;
+					System.out.println("로그인 실패");
+				}
+				count++;
+			}
+		} catch(Exception e) {
+			flag = false;
+			System.out.println("로그인 실패 > " + e.toString());
+		}
+		
+		return flag;
+	}
+	
+	/* 회원가입 메소드 */
+	public boolean joinCheck(String _i, String _p, String _n, String _e) {
+		boolean flag = false;
+		
+		String name = _i;
+		String phone = _p;
+		String age = _n;
+		String sex = _e;
+		
+		try {
+			String insertStr = "INSERT INTO UserInfo1243 (UserName, UserSex, UserAge, UserNumber) VALUES (?, ?, ?, ?)";
+			
+			PreparedStatement pstmt = con.prepareStatement(insertStr);
+			pstmt.setString(1, name);
+			pstmt.setString(2, phone);
+			pstmt.setString(3, age);
+			pstmt.setString(4, sex);
+			pstmt.executeUpdate();
+				
+			flag = true;
+			System.out.println("회원가입 성공");
+		} catch(Exception e) {
+			flag = false;
+			System.out.println("회원가입 실패 > " + e.toString());
+		}
+			
+		return flag;
+	}
+	
+	public void dbclose()
+	{
+	
+		try {
+			con.close();
+			stmt.close();
+			
+		} catch(Exception e) {
+			System.out.println("실패 > " + e.toString());
+		}
+			
+	}
+
+}

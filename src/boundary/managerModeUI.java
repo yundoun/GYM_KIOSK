@@ -243,7 +243,23 @@ public class managerModeUI {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //창닫기 버튼을 활성화 시켜 X를 누르면 프로그램 종료
 		
 
+		UserListButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				new userListUI();
+
+				
+			}
+		});
 		
+		SalesInquiryButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JButton b = (JButton)e.getSource();
+				
+				JOptionPane.showMessageDialog(null, "미구현 기능입니다.", "안내", JOptionPane.WARNING_MESSAGE);
+				//트레이너 프로필 조회 버튼
+			}
+		});
 	
 
 		

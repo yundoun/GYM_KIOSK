@@ -34,12 +34,18 @@ public class userListUI extends JFrame{
 		
 	}
 	public String Dayscheck(String days) {
-		int pdays = Integer.parseInt(days);
-		int month = pdays / 30;
-        int day = pdays % 30;
-        String ppdays = month + "개월" + day + "일";
-		return ppdays;
-	}
+	      if(days != null) {
+	         int pdays = Integer.parseInt(days);
+	         int month = pdays / 30;
+	         int day = pdays % 30;
+	         String ppdays = month + "개월" + day + "일";
+	         return ppdays;
+	      }
+	      else {
+	         String ppdays = "-";
+	         return ppdays;
+	      }
+	   }
 	public userListUI() {
 		String[] colName = { "이름", "성별", "나이", "전화번호", "남은이용권기간", "담당트레이너" }; //회원 정보를 나타낼 열 값
 		tableModel = new DefaultTableModel(colName, 0);
@@ -125,12 +131,23 @@ public class userListUI extends JFrame{
 		setLayout(null);
 		frame.setResizable(false); //창 크기 조절 불가
 		frame.setVisible(true); //창을 화면에 나타낼 것인지 설정
-		frame.setSize(900, 1000); //창 크기 설정
-		setLocationRelativeTo(null); //창 모니터 가운데 정렬
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // x를 누를 경우 종료
+		frame.setSize(900, 800); //창 크기 설정
+		frame.setPreferredSize(new Dimension(1920,1080)); //Dimension객체를 인자로 받으면서 해당 컴포넌트 기본크기를 결정
+		frame.setLocationRelativeTo(null); //화면을 중간에 띄움
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //창닫기 버튼을 활성화 시켜 X를 누르면 프로그램 종료
 		getContentPane().setBackground(Color.WHITE); // 프레임 bg color
 		
+		ScheduleCheckButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JButton b = (JButton)e.getSource();
+				
+				JOptionPane.showMessageDialog(null, "미구현 기능입니다.", "안내", JOptionPane.WARNING_MESSAGE);
+				//트레이너 프로필 조회 버튼
+			}
+		});
+		
 	}
+	
 	
 
 }

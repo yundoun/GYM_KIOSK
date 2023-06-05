@@ -5,11 +5,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
+import boundary.AccessDB.*;
 
 import Btn_Design.*;
 
 // 회원 로그인
 public class registerNewMemberUI {
+	AccessDB db = new AccessDB();
 	
 
 	public registerNewMemberUI() {
@@ -150,20 +152,64 @@ public class registerNewMemberUI {
 			public void actionPerformed(ActionEvent e) {
 				JButton b = (JButton)e.getSource();
 				
-		        int choice = JOptionPane.showOptionDialog(frame, "이름 : 윤도운\n전화번호 : 6974\n생년월일 : 000609\n성별 : 남\n\n입력하신 회원 정보가 맞으십니까?",
-		        		"회원정보확인", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
-		        if (choice == JOptionPane.OK_OPTION) {
-		            // OK button clicked
-		            // Perform actions accordingly
-		        	 JOptionPane.showMessageDialog(null, "회원가입이 완료되었습니다 !!");
-		        	 frame.dispose();
-		        	 new startUI();
-		        	
-		        } else if (choice == JOptionPane.CANCEL_OPTION) {
-		            // Cancel button clicked
-		            // Perform actions accordingly
-		        }
+				/* TextField에 입력된 회원 정보들을 변수에 초기화 */
+				String uname = nameTextField.getText();
+				String uphone = phoneTextField.getText();
+				String uyear = birthTextField.getText();
+				String usex = sexTextField.getText();
+
 				
+				//String uAcc = "0";
+				//String uCheck = "0";
+				System.out.println(uname);
+				System.out.println(usex);
+				System.out.println(uyear);
+				System.out.println(uphone);
+				
+				
+								
+				/* 가입하기 버튼 이벤트 */
+				// 실패하면 무조건 프로그램이 꺼짐 -> 수정 요망 계속 켜져있도록 해야함
+				if(b.getText().equals("확인")) {
+					if(uname.equals("") || usex.equals("") || uyear.equals("") || uphone.equals(""))
+					{
+						JOptionPane.showMessageDialog(null, "모든 정보를 기입해주세요", "회원가입 실패", JOptionPane.ERROR_MESSAGE);
+						System.out.println("회원가입 실패 > 회원정보 미입력");
+					}
+					
+					else
+					{
+						 
+							// 카드번호 전화번호가 존재하는지를 먼저 판별하고 회원 가입하기.		
+							if((!(uphone.length() == 11)))
+							{
+								JOptionPane.showMessageDialog(null, "전화번호는 11자리로 입력하세요.");
+							}
+							
+							else
+							{
+								if(db.joinCheck(uname, usex, uyear, uphone)) {
+
+										System.out.println("회원가입 성공");
+										JOptionPane.showMessageDialog(null, "회원가입 성공!");
+										db.dbclose();
+										new startUI(); //회원가입 성공시 ID로그인 페이지로 이동
+									} 
+								
+								else {
+									System.out.println("회원가입 실패");
+									JOptionPane.showMessageDialog(null, "회원가입 실패");
+									nameTextField.setText("");
+									}
+							
+							}
+							
+					}
+						/* 빈칸이 없을시 회원가입이 되는 코드 */
+					
+					
+					
+				}
 			}
 		});
 		

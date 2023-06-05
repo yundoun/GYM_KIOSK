@@ -7,7 +7,7 @@ import javax.swing.*;
 
 
 public class memberLoginUI {
-
+	AccessDB db = new AccessDB();
 	 private JTextField textField;
 	
 	// btn 패널에 버튼 추가 함수
@@ -210,9 +210,32 @@ public class memberLoginUI {
 		
 		okButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//로그인 버튼
-				frame.setVisible(false);
-				new mainUI();
+				JButton b = (JButton)e.getSource();
+				
+				/* TextField에 입력된 아이디와 비밀번호를 변수에 초기화 */
+				String upass = textField.getText();
+															
+				/* 로그인 버튼 이벤트 */
+				if(b.getText().equals("확인")) {
+					if(upass.equals("")) {
+						JOptionPane.showMessageDialog(null, "비밀번호를 입력해주세요", "로그인 실패", JOptionPane.ERROR_MESSAGE);
+						System.out.println("로그인 실패 > 로그인 정보 미입력");
+					}
+					
+					else if(upass != null) {
+						/* 로그인 데이터를 DB와 비교하는 문장 */
+						if(db.logincheck(upass)) {	
+							System.out.println("로그인 성공");
+							JOptionPane.showMessageDialog(null, "로그인에 성공하였습니다");
+							db.dbclose();
+							new mainUI(); //로그인 성공시 자리배치 페이지로 이동
+							frame.setVisible(false);
+						} else {
+							System.out.println("로그인 실패 > 로그인 정보 불일치");
+							JOptionPane.showMessageDialog(null, "로그인에 실패하였습니다");
+						}
+					}
+				}
 			}
 		});
 		
