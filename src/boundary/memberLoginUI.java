@@ -1,5 +1,6 @@
 package boundary;
 
+import control.*;
 import java.awt.*;	
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,7 +8,7 @@ import javax.swing.*;
 
 
 public class memberLoginUI {
-	AccessDB db = new AccessDB();
+	loginSystem db = new loginSystem();
 	 private JTextField textField;
 	
 	// btn 패널에 버튼 추가 함수

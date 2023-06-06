@@ -1,17 +1,18 @@
 package boundary;
+import control.*;
 
 import java.awt.*;	
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-import boundary.AccessDB.*;
 
 import Btn_Design.*;
 
+
 // 회원 로그인
 public class registerNewMemberUI {
-	AccessDB db = new AccessDB();
+	registerSystem db = new registerSystem();
 	
 
 	public registerNewMemberUI() {
@@ -25,7 +26,7 @@ public class registerNewMemberUI {
 		JLabel guideLabel = new JLabel("회원 등록");
 		JLabel nameLabel = new JLabel("이름");
 		JLabel phoneLabel = new JLabel("전화번호");
-		JLabel birthLabel = new JLabel("생년월일");
+		JLabel birthLabel = new JLabel("나이");
 		JLabel sexLabel = new JLabel("성별");
 		JTextField nameTextField = new JTextField(17);
 		JTextField phoneTextField = new JTextField(15);
@@ -188,7 +189,7 @@ public class registerNewMemberUI {
 							
 							else
 							{
-								if(db.joinCheck(uname, usex, uyear, uphone)) {
+								if(db.registerUser(uname, usex, uyear, uphone)) {
 
 										System.out.println("회원가입 성공");
 										JOptionPane.showMessageDialog(null, "회원가입 성공!");

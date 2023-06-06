@@ -237,7 +237,7 @@ public class managerModeUI {
 		
 		frame.setResizable(false); //창 크기 조절 불가
 		frame.setVisible(true); //창을 화면에 나타낼 것인지 설정
-		frame.setSize(900, 1000); //창 크기 설정
+		frame.setSize(900, 800); //창 크기 설정
 		frame.setPreferredSize(new Dimension(1920,1080)); //Dimension객체를 인자로 받으면서 해당 컴포넌트 기본크기를 결정
 		frame.setLocationRelativeTo(null); //화면을 중간에 띄움
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //창닫기 버튼을 활성화 시켜 X를 누르면 프로그램 종료

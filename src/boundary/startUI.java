@@ -87,8 +87,8 @@ public class startUI {
 		managerbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
-				new memberLoginUI();
-				
+//				new memberLoginUI();
+				new managerModeUI();
 				
 
 				

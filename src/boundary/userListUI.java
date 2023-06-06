@@ -108,7 +108,7 @@ public class userListUI extends JFrame{
 		
 		Label1.setOpaque(true);
 		Label1.setBackground(Color.white);
-		Label1.setFont(new Font("맑은 고딕", Font.BOLD, 40)); 
+		Label1.setFont(new Font("맑은 고딕", Font.BOLD, 20)); 
 		Label1.setSize(450,80);
 		Label1.setLocation(220, 50); 
 		Label1.setHorizontalAlignment(JLabel.CENTER);
@@ -116,7 +116,7 @@ public class userListUI extends JFrame{
 		
 		Label2.setOpaque(true);
 		Label2.setBackground(Color.white);
-		Label2.setFont(new Font("맑은 고딕", Font.BOLD, 40)); //로그인 라벨 글씨체, 굵기, 크기 설정
+		Label2.setFont(new Font("맑은 고딕", Font.BOLD, 20)); //로그인 라벨 글씨체, 굵기, 크기 설정
 		Label2.setSize(450,70); //로그인 라벨 크기 설정
 		Label2.setLocation(220, 150); //로그인 라벨 위치 설정
 		Label2.setHorizontalAlignment(JLabel.CENTER);

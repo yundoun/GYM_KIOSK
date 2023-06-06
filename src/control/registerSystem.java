@@ -1,17 +1,20 @@
-package boundary;
+package control;
 
+import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-public class AccessDB {
-	
+
+
+public class registerSystem {
 	Connection con = null;
 	Statement stmt = null;
 
-	public AccessDB() {
+	
+	
+	public void dbOpen() {   // 엑세스와 연결하는 메소드
 		// TODO Auto-generated method stub
 		String databaseURL = "jdbc:ucanaccess://Database1.accdb";
 
@@ -25,41 +28,22 @@ public class AccessDB {
 			e.printStackTrace();
 			System.out.print("UnConnect");
 		}
-		
 	}
+		
+	public void dbclose()
+	{
 	
-	public boolean logincheck(String _p) {
-		boolean flag = false;
-		
-		String pw = _p;
-		
 		try {
-			String checkingStr = "SELECT * FROM UserInfo123 WHERE UserNumber = '"+pw+"'";
-			ResultSet result = stmt.executeQuery(checkingStr);
-
-			int count = 0;
-			while(result.next()) {
-				if(pw.equals(result.getString("UserNumber"))) {
-					flag = true;
-					System.out.println("로그인 성공");
-				}
-				
-				else {
-					flag = false;
-					System.out.println("로그인 실패");
-				}
-				count++;
-			}
+			con.close();
+			stmt.close();
+			
 		} catch(Exception e) {
-			flag = false;
-			System.out.println("로그인 실패 > " + e.toString());
+			System.out.println("실패 > " + e.toString());
 		}
-		
-		return flag;
+			
 	}
-	
-	/* 회원가입 메소드 */
-	public boolean joinCheck(String _i, String _p, String _n, String _e) {
+		
+	public boolean registerUser(String _i, String _p, String _n, String _e) {
 		boolean flag = false;
 		
 		String name = _i;
@@ -86,18 +70,4 @@ public class AccessDB {
 			
 		return flag;
 	}
-	
-	public void dbclose()
-	{
-	
-		try {
-			con.close();
-			stmt.close();
-			
-		} catch(Exception e) {
-			System.out.println("실패 > " + e.toString());
-		}
-			
-	}
-
 }
