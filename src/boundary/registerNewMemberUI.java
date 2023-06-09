@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 
-import Btn_Design.*;
+
 
 
 // 회원 로그인
@@ -195,6 +195,8 @@ public class registerNewMemberUI {
 										System.out.println("회원가입 성공");
 										JOptionPane.showMessageDialog(null, "회원가입 성공!");
 										db.dbclose();
+										frame.setVisible(false);
+										frame.dispose();
 										new startUI(); //회원가입 성공시 ID로그인 페이지로 이동
 									} 
 								
