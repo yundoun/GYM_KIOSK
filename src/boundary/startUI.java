@@ -5,15 +5,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-import Btn_Design.*;
 
 // 회원 로그인
 public class startUI {
 	
 	public startUI() {
-		RoundedButton managerbtn = new RoundedButton("관리자 모드"); // 관리자 버튼
-		RoundedButton regbtn = new RoundedButton("신규회원/전화번호로 시작"); // 회원가입 버튼
-		RoundedButton loginbtn = new RoundedButton("기존회원/로그인"); // 로그인 버튼
+		JButton managerbtn = new JButton("관리자 모드"); // 관리자 버튼
+		JButton regbtn = new JButton("신규회원/전화번호로 시작"); // 회원가입 버튼
+		JButton loginbtn = new JButton("기존회원/로그인"); // 로그인 버튼
 		
 		
 		JLabel login = new JLabel("ZYM CARRY"); //로그인창을 알려주는 로그인 라벨
@@ -33,24 +32,28 @@ public class startUI {
 		managerbtn.setLocation(350, 600);
 		managerbtn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
 		managerbtn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
-		managerbtn.setContentAreaFilled(true); //관리자 버튼 영역 채우지 않음
+		managerbtn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
 		managerbtn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
 		managerbtn.setBackground(Color.orange);
 		frame.add(managerbtn); //관리자 버튼 출력
 		
 		regbtn.setSize(300, 100);
 		regbtn.setLocation(300, 300);
-		regbtn.setBorderPainted(false); //회원가입 버튼 테두리(외곽선) 없앰
-		regbtn.setFocusPainted(false); //회원가입 버튼이 선택되었을 때 생기는 테두리 사용 안함
-		regbtn.setContentAreaFilled(false); //회원가입 버튼 영역 채우지 않음
+		regbtn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		regbtn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		regbtn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		regbtn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		regbtn.setBackground(Color.white);
 		frame.add(regbtn); 
 		
 	
 		loginbtn.setSize(300, 100);
 		loginbtn.setLocation(300, 450);
-		loginbtn.setBorderPainted(false); //로그인 버튼 테두리(외곽선) 없앰
-		loginbtn.setFocusPainted(false); //로그인 버튼이 선택되었을 때 생기는 테두리 사용 안함
-		loginbtn.setContentAreaFilled(false); //로그인 버튼 영역 채우지 않음
+		loginbtn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		loginbtn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		loginbtn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		loginbtn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		loginbtn.setBackground(Color.white);
 		frame.add(loginbtn); //로그인 버튼 출력
 		
 		

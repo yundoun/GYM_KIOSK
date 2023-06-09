@@ -5,22 +5,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-import Btn_Design.*;
-
 // 회원 로그인
 public class buyTicketUI {
 		static int daycheck = 0;
 	public buyTicketUI() {
 		
-		
-		RoundedButton mon1btn = new RoundedButton("1개월");
-		RoundedButton mon3btn = new RoundedButton("3개월");
-		RoundedButton mon6btn = new RoundedButton("6개월");
-		RoundedButton mon12btn = new RoundedButton("12개월");
-		RoundedButton no1btn = new RoundedButton("1회");
-		RoundedButton no3btn = new RoundedButton("3회");
-		RoundedButton no10btn = new RoundedButton("10회");
-		RoundedButton no20btn = new RoundedButton("20회");
+		JButton mon1btn = new JButton("1개월");
+		JButton mon3btn = new JButton("3개월");
+		JButton mon6btn = new JButton("6개월");
+		JButton mon12btn = new JButton("12개월");
+		JButton no1btn = new JButton("1회");
+		JButton no3btn = new JButton("3회");
+		JButton no10btn = new JButton("10회");
+		JButton no20btn = new JButton("20회");
 		
 		
 		
@@ -46,58 +43,74 @@ public class buyTicketUI {
 		
 		mon1btn.setSize(150,40);
 		mon1btn.setLocation(200, 300);
-		mon1btn.setBorderPainted(false); //테두리(외곽선) 없앰
-		mon1btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		mon1btn.setContentAreaFilled(false); //영역 채우지 않음
+		mon1btn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		mon1btn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		mon1btn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		mon1btn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		mon1btn.setBackground(Color.LIGHT_GRAY);
 		frame.add(mon1btn); 
 		
 		mon3btn.setSize(150,40);
 		mon3btn.setLocation(400, 300);
-		mon3btn.setBorderPainted(false); //테두리(외곽선) 없앰
-		mon3btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		mon3btn.setContentAreaFilled(false); //영역 채우지 않음
+		mon3btn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		mon3btn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		mon3btn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		mon3btn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		mon3btn.setBackground(Color.LIGHT_GRAY);
 		frame.add(mon3btn); 
 		
 		mon6btn.setSize(150,40);
 		mon6btn.setLocation(200, 360);
-		mon6btn.setBorderPainted(false); //테두리(외곽선) 없앰
-		mon6btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		mon6btn.setContentAreaFilled(false); //영역 채우지 않음
+		mon6btn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		mon6btn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		mon6btn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		mon6btn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		mon6btn.setBackground(Color.LIGHT_GRAY);
 		frame.add(mon6btn); 
 		
 		mon12btn.setSize(150,40);
 		mon12btn.setLocation(400, 360);
-		mon12btn.setBorderPainted(false); //테두리(외곽선) 없앰
-		mon12btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		mon12btn.setContentAreaFilled(false); //영역 채우지 않음
+		mon12btn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		mon12btn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		mon12btn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		mon12btn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		mon12btn.setBackground(Color.LIGHT_GRAY);
 		frame.add(mon12btn); 
 		
 		no1btn.setSize(150,40);
 		no1btn.setLocation(200, 550);
-		no1btn.setBorderPainted(false); //테두리(외곽선) 없앰
-		no1btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		no1btn.setContentAreaFilled(false); //영역 채우지 않음
+		no1btn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		no1btn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		no1btn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		no1btn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		no1btn.setBackground(Color.LIGHT_GRAY);
 		frame.add(no1btn); 
 		
 		no3btn.setSize(150,40);
 		no3btn.setLocation(400, 550);
-		no3btn.setBorderPainted(false); //테두리(외곽선) 없앰
-		no3btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		no3btn.setContentAreaFilled(false); //영역 채우지 않음
+		no3btn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		no3btn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		no3btn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		no3btn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		no3btn.setBackground(Color.LIGHT_GRAY);
 		frame.add(no3btn); 
 		
 		no10btn.setSize(150,40);
 		no10btn.setLocation(200, 610);
-		no10btn.setBorderPainted(false); //테두리(외곽선) 없앰
-		no10btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		no10btn.setContentAreaFilled(false); //영역 채우지 않음
+		no10btn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		no10btn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		no10btn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		no10btn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		no10btn.setBackground(Color.LIGHT_GRAY);
 		frame.add(no10btn); 
 		
 		no20btn.setSize(150,40);
 		no20btn.setLocation(400, 610);
-		no20btn.setBorderPainted(false); //테두리(외곽선) 없앰
-		no20btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		no20btn.setContentAreaFilled(false); //영역 채우지 않음
+		no20btn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		no20btn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		no20btn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		no20btn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		no20btn.setBackground(Color.LIGHT_GRAY);
 		frame.add(no20btn); 
 		
 		cancelButton.setOpaque(true);

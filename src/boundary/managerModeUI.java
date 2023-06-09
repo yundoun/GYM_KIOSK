@@ -6,34 +6,33 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-import Btn_Design.*;
 
 // 회원 로그인
 public class managerModeUI {
 	
 	public managerModeUI() {
-		RoundedButton one = new RoundedButton("1");
-		RoundedButton two = new RoundedButton("2");
-		RoundedButton three = new RoundedButton("3");
-		RoundedButton four = new RoundedButton("4");
-		RoundedButton five = new RoundedButton("5");
-		RoundedButton six = new RoundedButton("6");
-		RoundedButton seven = new RoundedButton("7");
-		RoundedButton eight = new RoundedButton("8");
-		RoundedButton nine = new RoundedButton("9");
+		JButton one = new JButton("1");
+		JButton two = new JButton("2");
+		JButton three = new JButton("3");
+		JButton four = new JButton("4");
+		JButton five = new JButton("5");
+		JButton six = new JButton("6");
+		JButton seven = new JButton("7");
+		JButton eight = new JButton("8");
+		JButton nine = new JButton("9");
 
-		RoundedButton one2 = new RoundedButton("1");
-		RoundedButton two2= new RoundedButton("2");
-		RoundedButton three2 = new RoundedButton("3");
-		RoundedButton four2 = new RoundedButton("4");
-		RoundedButton five2 = new RoundedButton("5");
-		RoundedButton six2 = new RoundedButton("6");
-		RoundedButton seven2 = new RoundedButton("7");
-		RoundedButton eight2 = new RoundedButton("8");
-		RoundedButton nine2 = new RoundedButton("9");
+		JButton one2 = new JButton("1");
+		JButton two2= new JButton("2");
+		JButton three2 = new JButton("3");
+		JButton four2 = new JButton("4");
+		JButton five2 = new JButton("5");
+		JButton six2 = new JButton("6");
+		JButton seven2 = new JButton("7");
+		JButton eight2 = new JButton("8");
+		JButton nine2 = new JButton("9");
 
-		RoundedButton UserListButton = new RoundedButton("회원목록");
-		RoundedButton SalesInquiryButton = new RoundedButton("매출조회");
+		JButton UserListButton = new JButton("회원목록");
+		JButton SalesInquiryButton = new JButton("매출조회");
 		
 		JLabel Label1 = new JLabel("ZYM CARRY"); //타이틀 출력
 
@@ -47,13 +46,13 @@ public class managerModeUI {
 		panel.setBackground(Color.CYAN); //흰색 RGB코드, 불투명하게
 		menLockerUI.setOpaque(true);
 		menLockerUI.setBackground(Color.WHITE);
-		menLockerUI.setSize(300,300); //menLockerUI 크기
+		menLockerUI.setSize(300,280); //menLockerUI 크기
 		menLockerUI.setLocation(90, 150);
 		
 		panel.setBackground(Color.CYAN); //흰색 RGB코드, 불투명하게
 		womenLockerUI.setOpaque(true);
 		womenLockerUI.setBackground(Color.WHITE);
-		womenLockerUI.setSize(300,300); //menLockerUI 크기
+		womenLockerUI.setSize(300,280); //menLockerUI 크기
 		womenLockerUI.setLocation(90, 470);
 
 		
@@ -80,143 +79,183 @@ public class managerModeUI {
 		
 		one.setSize(40,40);
 		one.setLocation(100,180);
-		one.setBorderPainted(false); //테두리(외곽선) 없앰
-		one.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		one.setContentAreaFilled(false); //영역 채우지 않음
+		one.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		one.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		one.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		one.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		one.setBackground(Color.LIGHT_GRAY);
 		frame.add(one); 
 		
 		two.setSize(40,40);
 		two.setLocation(200, 180);
-		two.setBorderPainted(false); //테두리(외곽선) 없앰
-		two.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		two.setContentAreaFilled(false); //영역 채우지 않음
+		two.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		two.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		two.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		two.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		two.setBackground(Color.LIGHT_GRAY);
 		frame.add(two); 
 		
 		three.setSize(40,40);
 		three.setLocation(300, 180);
-		three.setBorderPainted(false); //테두리(외곽선) 없앰
-		three.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		three.setContentAreaFilled(false); //영역 채우지 않음
+		three.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		three.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		three.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		three.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		three.setBackground(Color.LIGHT_GRAY);
 		frame.add(three); 
 		
 		four.setSize(40,40);
 		four.setLocation(100, 280);
-		four.setBorderPainted(false); //테두리(외곽선) 없앰
-		four.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		four.setContentAreaFilled(false); //영역 채우지 않음
+		four.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		four.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		four.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		four.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		four.setBackground(Color.LIGHT_GRAY);
 		frame.add(four); 
 		
 		five.setSize(40,40);
 		five.setLocation(200, 280);
-		five.setBorderPainted(false); //테두리(외곽선) 없앰
-		five.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		five.setContentAreaFilled(false); //영역 채우지 않음
+		five.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		five.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		five.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		five.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		five.setBackground(Color.LIGHT_GRAY);
 		frame.add(five); 
 		
 		six.setSize(40,40);
 		six.setLocation(300, 280);
-		six.setBorderPainted(false); //테두리(외곽선) 없앰
-		six.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		six.setContentAreaFilled(false); //영역 채우지 않음
+		six.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		six.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		six.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		six.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		six.setBackground(Color.LIGHT_GRAY);
 		frame.add(six); 
 		
 		seven.setSize(40,40);
 		seven.setLocation(100, 380);
-		seven.setBorderPainted(false); //테두리(외곽선) 없앰
-		seven.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		seven.setContentAreaFilled(false); //영역 채우지 않음
+		seven.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		seven.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		seven.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		seven.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		seven.setBackground(Color.LIGHT_GRAY);
 		frame.add(seven); 
 		
 		eight.setSize(40,40);
 		eight.setLocation(200, 380);
-		eight.setBorderPainted(false); //테두리(외곽선) 없앰
-		eight.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		eight.setContentAreaFilled(false); //영역 채우지 않음
+		eight.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		eight.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		eight.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		eight.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		eight.setBackground(Color.LIGHT_GRAY);
 		frame.add(eight); 
 
 		nine.setSize(40,40);
 		nine.setLocation(300, 380);
-		nine.setBorderPainted(false); //테두리(외곽선) 없앰
-		nine.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		nine.setContentAreaFilled(false); //영역 채우지 않음
+		nine.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		nine.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		nine.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		nine.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		nine.setBackground(Color.LIGHT_GRAY);
 		frame.add(nine); 
 		
 		
 		one2.setSize(40,40);
 		one2.setLocation(100,500);
-		one2.setBorderPainted(false); //테두리(외곽선) 없앰
-		one2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		one2.setContentAreaFilled(false); //영역 채우지 않음
+		one2.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		one2.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		one2.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		one2.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		one2.setBackground(Color.LIGHT_GRAY);
 		frame.add(one2); 
 		
 		two2.setSize(40,40);
 		two2.setLocation(200, 500);
-		two2.setBorderPainted(false); //테두리(외곽선) 없앰
-		two2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		two2.setContentAreaFilled(false); //영역 채우지 않음
+		two2.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		two2.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		two2.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		two2.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		two2.setBackground(Color.LIGHT_GRAY);
 		frame.add(two2); 
 		
 		three2.setSize(40,40);
 		three2.setLocation(300, 500);
-		three2.setBorderPainted(false); //테두리(외곽선) 없앰
-		three2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		three2.setContentAreaFilled(false); //영역 채우지 않음
+		three2.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		three2.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		three2.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		three2.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		three2.setBackground(Color.LIGHT_GRAY);
 		frame.add(three2); 
 		
 		four2.setSize(40,40);
 		four2.setLocation(100, 600);
-		four2.setBorderPainted(false); //테두리(외곽선) 없앰
-		four2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		four2.setContentAreaFilled(false); //영역 채우지 않음
+		four2.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		four2.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		four2.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		four2.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		four2.setBackground(Color.LIGHT_GRAY);
 		frame.add(four2); 
 		
 		five2.setSize(40,40);
 		five2.setLocation(200, 600);
-		five2.setBorderPainted(false); //테두리(외곽선) 없앰
-		five2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		five2.setContentAreaFilled(false); //영역 채우지 않음
+		five2.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		five2.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		five2.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		five2.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		five2.setBackground(Color.LIGHT_GRAY);
 		frame.add(five2); 
 		
 		six2.setSize(40,40);
 		six2.setLocation(300, 600);
-		six2.setBorderPainted(false); //테두리(외곽선) 없앰
-		six2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		six2.setContentAreaFilled(false); //영역 채우지 않음
+		six2.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		six2.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		six2.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		six2.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		six2.setBackground(Color.LIGHT_GRAY);
 		frame.add(six2); 
 		
 		seven2.setSize(40,40);
 		seven2.setLocation(100, 700);
-		seven2.setBorderPainted(false); //테두리(외곽선) 없앰
-		seven2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		seven2.setContentAreaFilled(false); //영역 채우지 않음
+		seven2.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		seven2.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		seven2.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		seven2.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		seven2.setBackground(Color.LIGHT_GRAY);
 		frame.add(seven2); 
 		
 		eight2.setSize(40,40);
 		eight2.setLocation(200, 700);
-		eight2.setBorderPainted(false); //테두리(외곽선) 없앰
-		eight2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		eight2.setContentAreaFilled(false); //영역 채우지 않음
+		eight2.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		eight2.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		eight2.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		eight2.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		eight2.setBackground(Color.LIGHT_GRAY);
 		frame.add(eight2); 
 
 		nine2.setSize(40,40);
 		nine2.setLocation(300, 700);
-		nine2.setBorderPainted(false); //테두리(외곽선) 없앰
-		nine2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		nine2.setContentAreaFilled(false); //영역 채우지 않음
+		nine2.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		nine2.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		nine2.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		nine2.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		nine2.setBackground(Color.LIGHT_GRAY);
 		frame.add(nine2); 
 		
 		UserListButton.setSize(300,50);
 		UserListButton.setLocation(500, 260);
-		UserListButton.setBorderPainted(false); //테두리(외곽선) 없앰
-		UserListButton.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		UserListButton.setContentAreaFilled(false); //영역 채우지 않음
+		UserListButton.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		UserListButton.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		UserListButton.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		UserListButton.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		UserListButton.setBackground(Color.white);
 		frame.add(UserListButton); 
 
 		SalesInquiryButton.setSize(300,50);
 		SalesInquiryButton.setLocation(500, 360);
-		SalesInquiryButton.setBorderPainted(false); //테두리(외곽선) 없앰
-		SalesInquiryButton.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		SalesInquiryButton.setContentAreaFilled(false); //영역 채우지 않음
+		SalesInquiryButton.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		SalesInquiryButton.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		SalesInquiryButton.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		SalesInquiryButton.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		SalesInquiryButton.setBackground(Color.white);
 		frame.add(SalesInquiryButton); 
 			
 		

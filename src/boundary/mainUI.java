@@ -7,7 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-import Btn_Design.*;
 
 // 회원 로그인
 public class mainUI {
@@ -24,10 +23,10 @@ public class mainUI {
 		JLabel label1 = new JLabel(UserName+" 회원님, 반갑습니다 !");
 		JLabel label2 = new JLabel("이용하실 서비스를 선택하세요.");
 		
-		RoundedButton trainerProfileButton = new RoundedButton("트레이너 프로필 조회");
-		RoundedButton buyTicketButton = new RoundedButton("이용권 구매");
-		RoundedButton ptConsultantResevationButton = new RoundedButton("PT 상담 예약");
-		RoundedButton home_btn = new RoundedButton("처음으로");
+		JButton trainerProfileButton = new JButton("트레이너 프로필 조회");
+		JButton buyTicketButton = new JButton("이용권 구매");
+		JButton ptConsultantResevationButton = new JButton("PT 상담 예약");
+		JButton home_btn = new JButton("처음으로");
 		
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
@@ -76,30 +75,38 @@ public class mainUI {
 		
 		home_btn.setSize(100, 50);
 		home_btn.setLocation(750, 650);
-		home_btn.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
-		home_btn.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
-		home_btn.setContentAreaFilled(false); //버튼 영역 채우지 않음
+		home_btn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		home_btn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		home_btn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		home_btn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		home_btn.setBackground(Color.LIGHT_GRAY);
 		frame.add(home_btn); //버튼 출력
 		
 		trainerProfileButton.setSize(400,100);
 		trainerProfileButton.setLocation(250, 350);
-		trainerProfileButton.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
-		trainerProfileButton.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
-		trainerProfileButton.setContentAreaFilled(false); //버튼 영역 채우지 않음
+		trainerProfileButton.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		trainerProfileButton.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		trainerProfileButton.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		trainerProfileButton.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		trainerProfileButton.setBackground(Color.yellow);
 		frame.add(trainerProfileButton); //버튼 출력
 		
 		buyTicketButton.setSize(400, 100);
 		buyTicketButton.setLocation(250, 480);
-		buyTicketButton.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
-		buyTicketButton.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
-		buyTicketButton.setContentAreaFilled(false); //버튼 영역 채우지 않음
+		buyTicketButton.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		buyTicketButton.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		buyTicketButton.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		buyTicketButton.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		buyTicketButton.setBackground(Color.yellow);
 		frame.add(buyTicketButton); //버튼 출력
 		
 		ptConsultantResevationButton.setSize(400, 100);
 		ptConsultantResevationButton.setLocation(250, 610);
-		ptConsultantResevationButton.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
-		ptConsultantResevationButton.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
-		ptConsultantResevationButton.setContentAreaFilled(false); //버튼 영역 채우지 않음
+		ptConsultantResevationButton.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		ptConsultantResevationButton.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		ptConsultantResevationButton.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		ptConsultantResevationButton.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		ptConsultantResevationButton.setBackground(Color.yellow);
 		frame.add(ptConsultantResevationButton); //버튼 출력
 		
 		

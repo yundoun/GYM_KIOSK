@@ -9,9 +9,6 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 
-import Btn_Design.RoundedButton;
-import Btn_Design.RoundedButton4;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -92,9 +89,9 @@ public class userListUI extends JFrame{
 		scroll.setBounds(20, 250, 850, 500); //테이블 위치, 크기 설정
 		add(scroll); //프레임에 테이블 추가
 
-		RoundedButton del_btn = new RoundedButton("회원삭제");
-		RoundedButton upd_btn = new RoundedButton("회원수정");
-		RoundedButton home_btn = new RoundedButton("처음으로");
+		JButton del_btn = new JButton("회원삭제");
+		JButton upd_btn = new JButton("회원수정");
+		JButton home_btn = new JButton("처음으로");
 
 		JLabel Label1 = new JLabel("ZYM CARRY"); //타이틀 출력
 		JLabel Label2 = new JLabel("회원목록"); //서브타이틀 출력
@@ -105,25 +102,31 @@ public class userListUI extends JFrame{
 
 		frame.add(scroll);
 
-		home_btn.setSize(100,50);
-		home_btn.setLocation(100, 60);
-		home_btn.setBorderPainted(false); //테두리(외곽선) 없앰
-		home_btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		home_btn.setContentAreaFilled(false); //영역 채우지 않음
+		home_btn.setSize(100,30);
+		home_btn.setLocation(50, 90);
+		home_btn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		home_btn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		home_btn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		home_btn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		home_btn.setBackground(Color.LIGHT_GRAY);
 		frame.add(home_btn); 
 		
-		del_btn.setSize(100,50);
-		del_btn.setLocation(100, 130);
-		del_btn.setBorderPainted(false); //테두리(외곽선) 없앰
-		del_btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		del_btn.setContentAreaFilled(false); //영역 채우지 않음
+		del_btn.setSize(100,30);
+		del_btn.setLocation(50, 140);
+		del_btn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		del_btn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		del_btn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		del_btn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		del_btn.setBackground(Color.LIGHT_GRAY);
 		frame.add(del_btn); 
 		
-		upd_btn.setSize(100,50);
-		upd_btn.setLocation(100, 200);
-		upd_btn.setBorderPainted(false); //테두리(외곽선) 없앰
-		upd_btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		upd_btn.setContentAreaFilled(false); //영역 채우지 않음
+		upd_btn.setSize(100,30);
+		upd_btn.setLocation(50, 190);
+		upd_btn.setBorderPainted(false); //관리자 버튼 테두리(외곽선) 없앰
+		upd_btn.setFocusPainted(false); //관리자 버튼이 선택되었을 때 생기는 테두리 사용 안함
+		upd_btn.setContentAreaFilled(true); //관리자 버튼 영역 채우기
+		upd_btn.setOpaque(true); //Opaque값을 true로 미리 설정해 주어야 배경색이 적용된다.
+		upd_btn.setBackground(Color.LIGHT_GRAY);
 		frame.add(upd_btn); 
 			
 		
