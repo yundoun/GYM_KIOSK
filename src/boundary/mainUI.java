@@ -1,10 +1,12 @@
 package boundary;
+
+import entity.*;
+import control.*;
 import java.awt.*;	
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-
 import Btn_Design.*;
 
 // 회원 로그인
@@ -13,7 +15,8 @@ public class mainUI {
 
 	public mainUI() {
 		
-		String UserName = "null";
+		User user =  loginSystem.curUser;
+		String UserName = user.getName();
 		
 		JLabel titleLabel = new JLabel("ZYM CARRY");
 		JPanel guidePanel = new JPanel();
@@ -24,6 +27,7 @@ public class mainUI {
 		RoundedButton trainerProfileButton = new RoundedButton("트레이너 프로필 조회");
 		RoundedButton buyTicketButton = new RoundedButton("이용권 구매");
 		RoundedButton ptConsultantResevationButton = new RoundedButton("PT 상담 예약");
+		RoundedButton home_btn = new RoundedButton("처음으로");
 		
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
@@ -70,6 +74,13 @@ public class mainUI {
 		btnPanel.add(ptConsultantResevationButton);
 		
 		
+		home_btn.setSize(100, 50);
+		home_btn.setLocation(750, 650);
+		home_btn.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
+		home_btn.setFocusPainted(false); //버튼이 선택되었을 때 생기는 테두리 사용 안함
+		home_btn.setContentAreaFilled(false); //버튼 영역 채우지 않음
+		frame.add(home_btn); //버튼 출력
+		
 		trainerProfileButton.setSize(400,100);
 		trainerProfileButton.setLocation(250, 350);
 		trainerProfileButton.setBorderPainted(false); //버튼 테두리(외곽선) 없앰
@@ -107,7 +118,12 @@ public class mainUI {
 		//이벤트 처리 추가
 
 		
-
+		home_btn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {	
+				frame.setVisible(false);
+				new startUI();
+			}
+		});
 		
 		trainerProfileButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

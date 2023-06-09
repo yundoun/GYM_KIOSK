@@ -1,0 +1,10 @@
+package control;
+
+import entity.*;
+import java.sql.*;
+
+public class buyticket {
+	
+	
+	
+}

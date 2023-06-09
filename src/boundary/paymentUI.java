@@ -1,4 +1,7 @@
 package boundary;
+
+import control.*;
+import entity.*;
 import java.awt.*;	
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,8 +10,10 @@ import javax.swing.border.LineBorder;
 import javax.swing.JButton;
 
 public class paymentUI {
-	
-	
+	userList td = new userList();
+	User user =  loginSystem.curUser;
+	int tk = buyTicketUI.daycheck;
+	int lk = lockerUI.lockercount;
 	
 	public paymentUI() {
 		
@@ -107,10 +112,11 @@ public class paymentUI {
 	
 		okButton.addActionListener(new ActionListener() {
 		    public void actionPerformed(ActionEvent e) {
-		        int choice = JOptionPane.showOptionDialog(frame, "결제 정보\n선택한 이용권 : 12개월\n선택한 락커 : 74번\n선택하신 상품으로 결제 하시겠습니까?", "상품정보확인", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+		        int choice = JOptionPane.showOptionDialog(frame, "결제 정보\n선택한 이용권 : "+ buyTicketUI.daycheck + "일" + "\n선택한 락커 : " + lockerUI.lockercount +"번"  + "\n선택하신 상품으로 결제 하시겠습니까?", "상품정보확인", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
 		        if (choice == JOptionPane.OK_OPTION) {
-		            // OK button clicked
-		            // Perform actions accordingly
+		        	int payCount = td.user_day(buyTicketUI.daycheck,user.getName());
+					//List<Role> list = db.getRoles();
+					System.out.println(payCount);
 		        	 JOptionPane.showMessageDialog(null, "결제가 완료되었습니다 !!");
 		        	 frame.dispose();
 		        	 new startUI();

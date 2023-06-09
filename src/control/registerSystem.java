@@ -1,23 +1,18 @@
 package control;
 
-import java.sql.PreparedStatement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 
 public class registerSystem {
+	
 	Connection con = null;
 	Statement stmt = null;
 
 	
 	
-	public void dbOpen() {   // 엑세스와 연결하는 메소드
+	public registerSystem() {   // 엑세스와 연결하는 메소드
 		// TODO Auto-generated method stub
 		String databaseURL = "jdbc:ucanaccess://Database1.accdb";
-
 		
 		try {
 			con = DriverManager.getConnection(databaseURL);
@@ -29,6 +24,7 @@ public class registerSystem {
 			System.out.print("UnConnect");
 		}
 	}
+	
 		
 	public void dbclose()
 	{

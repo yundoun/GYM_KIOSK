@@ -1,6 +1,7 @@
 package boundary;
 
 import control.*;
+import entity.*;
 import java.awt.*;	
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -222,16 +223,26 @@ public class memberLoginUI {
 						JOptionPane.showMessageDialog(null, "비밀번호를 입력해주세요", "로그인 실패", JOptionPane.ERROR_MESSAGE);
 						System.out.println("로그인 실패 > 로그인 정보 미입력");
 					}
-					
+					else if(upass.equals("0000")) {
+						System.out.println("로그인 성공");
+						
+						JOptionPane.showMessageDialog(null, "로그인에 성공하였습니다");
+						db.dbclose();
+						new managerModeUI(); //로그인 성공시 자리배치 페이지로 이동
+						frame.setVisible(false);
+					}			
 					else if(upass != null) {
 						/* 로그인 데이터를 DB와 비교하는 문장 */
 						if(db.logincheck(upass)) {	
 							System.out.println("로그인 성공");
+							
 							JOptionPane.showMessageDialog(null, "로그인에 성공하였습니다");
 							db.dbclose();
 							new mainUI(); //로그인 성공시 자리배치 페이지로 이동
 							frame.setVisible(false);
-						} else {
+						} 
+						
+						else {
 							System.out.println("로그인 실패 > 로그인 정보 불일치");
 							JOptionPane.showMessageDialog(null, "로그인에 실패하였습니다");
 						}

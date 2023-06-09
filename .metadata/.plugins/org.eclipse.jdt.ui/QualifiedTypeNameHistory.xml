@@ -2,4 +2,7 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="boundary.AccessDB"/>
+    <fullyQualifiedTypeName name="control.deleteUser"/>
+    <fullyQualifiedTypeName name="control.loginSystem"/>
+    <fullyQualifiedTypeName name="control.UserList"/>
 </qualifiedTypeNameHistroy>

@@ -48,13 +48,13 @@ public class managerModeUI {
 		menLockerUI.setOpaque(true);
 		menLockerUI.setBackground(Color.WHITE);
 		menLockerUI.setSize(300,300); //menLockerUI 크기
-		menLockerUI.setLocation(90, 220);
+		menLockerUI.setLocation(90, 150);
 		
 		panel.setBackground(Color.CYAN); //흰색 RGB코드, 불투명하게
 		womenLockerUI.setOpaque(true);
 		womenLockerUI.setBackground(Color.WHITE);
 		womenLockerUI.setSize(300,300); //menLockerUI 크기
-		womenLockerUI.setLocation(90, 550);
+		womenLockerUI.setLocation(90, 470);
 
 		
 		menLockerUI.add(one); 
@@ -79,63 +79,63 @@ public class managerModeUI {
 
 		
 		one.setSize(40,40);
-		one.setLocation(100,250);
+		one.setLocation(100,180);
 		one.setBorderPainted(false); //테두리(외곽선) 없앰
 		one.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		one.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(one); 
 		
 		two.setSize(40,40);
-		two.setLocation(200, 250);
+		two.setLocation(200, 180);
 		two.setBorderPainted(false); //테두리(외곽선) 없앰
 		two.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		two.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(two); 
 		
 		three.setSize(40,40);
-		three.setLocation(300, 250);
+		three.setLocation(300, 180);
 		three.setBorderPainted(false); //테두리(외곽선) 없앰
 		three.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		three.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(three); 
 		
 		four.setSize(40,40);
-		four.setLocation(100, 350);
+		four.setLocation(100, 280);
 		four.setBorderPainted(false); //테두리(외곽선) 없앰
 		four.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		four.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(four); 
 		
 		five.setSize(40,40);
-		five.setLocation(200, 350);
+		five.setLocation(200, 280);
 		five.setBorderPainted(false); //테두리(외곽선) 없앰
 		five.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		five.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(five); 
 		
 		six.setSize(40,40);
-		six.setLocation(300, 350);
+		six.setLocation(300, 280);
 		six.setBorderPainted(false); //테두리(외곽선) 없앰
 		six.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		six.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(six); 
 		
 		seven.setSize(40,40);
-		seven.setLocation(100, 450);
+		seven.setLocation(100, 380);
 		seven.setBorderPainted(false); //테두리(외곽선) 없앰
 		seven.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		seven.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(seven); 
 		
 		eight.setSize(40,40);
-		eight.setLocation(200, 450);
+		eight.setLocation(200, 380);
 		eight.setBorderPainted(false); //테두리(외곽선) 없앰
 		eight.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		eight.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(eight); 
 
 		nine.setSize(40,40);
-		nine.setLocation(300, 450);
+		nine.setLocation(300, 380);
 		nine.setBorderPainted(false); //테두리(외곽선) 없앰
 		nine.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		nine.setContentAreaFilled(false); //영역 채우지 않음
@@ -143,63 +143,63 @@ public class managerModeUI {
 		
 		
 		one2.setSize(40,40);
-		one2.setLocation(100,600);
+		one2.setLocation(100,500);
 		one2.setBorderPainted(false); //테두리(외곽선) 없앰
 		one2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		one2.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(one2); 
 		
 		two2.setSize(40,40);
-		two2.setLocation(200, 600);
+		two2.setLocation(200, 500);
 		two2.setBorderPainted(false); //테두리(외곽선) 없앰
 		two2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		two2.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(two2); 
 		
 		three2.setSize(40,40);
-		three2.setLocation(300, 600);
+		three2.setLocation(300, 500);
 		three2.setBorderPainted(false); //테두리(외곽선) 없앰
 		three2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		three2.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(three2); 
 		
 		four2.setSize(40,40);
-		four2.setLocation(100, 700);
+		four2.setLocation(100, 600);
 		four2.setBorderPainted(false); //테두리(외곽선) 없앰
 		four2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		four2.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(four2); 
 		
 		five2.setSize(40,40);
-		five2.setLocation(200, 700);
+		five2.setLocation(200, 600);
 		five2.setBorderPainted(false); //테두리(외곽선) 없앰
 		five2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		five2.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(five2); 
 		
 		six2.setSize(40,40);
-		six2.setLocation(300, 700);
+		six2.setLocation(300, 600);
 		six2.setBorderPainted(false); //테두리(외곽선) 없앰
 		six2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		six2.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(six2); 
 		
 		seven2.setSize(40,40);
-		seven2.setLocation(100, 800);
+		seven2.setLocation(100, 700);
 		seven2.setBorderPainted(false); //테두리(외곽선) 없앰
 		seven2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		seven2.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(seven2); 
 		
 		eight2.setSize(40,40);
-		eight2.setLocation(200, 800);
+		eight2.setLocation(200, 700);
 		eight2.setBorderPainted(false); //테두리(외곽선) 없앰
 		eight2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		eight2.setContentAreaFilled(false); //영역 채우지 않음
 		frame.add(eight2); 
 
 		nine2.setSize(40,40);
-		nine2.setLocation(300, 800);
+		nine2.setLocation(300, 700);
 		nine2.setBorderPainted(false); //테두리(외곽선) 없앰
 		nine2.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
 		nine2.setContentAreaFilled(false); //영역 채우지 않음

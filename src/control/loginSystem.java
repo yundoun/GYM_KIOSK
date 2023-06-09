@@ -1,5 +1,7 @@
 package control;
 
+import entity.*;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -7,11 +9,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class loginSystem {
+	
+	public static User curUser = new User(null, null, 0, null, 0, 0);
 
 	Statement stmt = null;
 	Connection con = null;
 	
-	public void dbOpen() {   // 엑세스와 연결하는 메소드
+	public loginSystem() {   // 엑세스와 연결하는 메소드
 		// TODO Auto-generated method stub
 		String databaseURL = "jdbc:ucanaccess://Database1.accdb";
 
@@ -54,6 +58,15 @@ public class loginSystem {
 				if(pw.equals(result.getString("UserNumber"))) {
 					flag = true;
 					System.out.println("로그인 성공");
+					
+					
+					
+					curUser.setAge(result.getInt("Userage"));
+					curUser.setNum(result.getString("UserNumber"));
+					curUser.setName(result.getString("UserName"));
+					curUser.setSex(result.getString("Usersex"));
+					curUser.setManagerNo(result.getInt("consultationInfo"));
+					curUser.setDays(result.getInt("daysRemaining"));
 				}
 				
 				else {

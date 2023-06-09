@@ -17,11 +17,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import control.manageUserListSystem;
 
 
 // 회원 로그인
 public class userListUI extends JFrame{
-	String db_id = null;
+	manageUserListSystem db = new manageUserListSystem();
+	String db_name = null;
+	String db_sex = null;
+	String db_age = null;
+	String db_num = null;
+	String db_day = null;
+	int db_day1 = 0;
 	int row;
 	Connection conn = null;
 	Statement stmt = null;
@@ -36,10 +43,8 @@ public class userListUI extends JFrame{
 	public String Dayscheck(String days) {
 	      if(days != null) {
 	         int pdays = Integer.parseInt(days);
-	         int month = pdays / 30;
-	         int day = pdays % 30;
-	         String ppdays = month + "개월" + day + "일";
-	         return ppdays;
+	         String pdays1 = pdays + "일";
+	         return pdays1;
 	      }
 	      else {
 	         String ppdays = "-";
@@ -87,23 +92,39 @@ public class userListUI extends JFrame{
 		scroll.setBounds(20, 250, 850, 500); //테이블 위치, 크기 설정
 		add(scroll); //프레임에 테이블 추가
 
-		RoundedButton ScheduleCheckButton = new RoundedButton("출석/시간표 조회");
+		RoundedButton del_btn = new RoundedButton("회원삭제");
+		RoundedButton upd_btn = new RoundedButton("회원수정");
+		RoundedButton home_btn = new RoundedButton("처음으로");
 
 		JLabel Label1 = new JLabel("ZYM CARRY"); //타이틀 출력
 		JLabel Label2 = new JLabel("회원목록"); //서브타이틀 출력
-
+		
 		
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
 
 		frame.add(scroll);
 
-		ScheduleCheckButton.setSize(300,50);
-		ScheduleCheckButton.setLocation(300, 830);
-		ScheduleCheckButton.setBorderPainted(false); //테두리(외곽선) 없앰
-		ScheduleCheckButton.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
-		ScheduleCheckButton.setContentAreaFilled(false); //영역 채우지 않음
-		frame.add(ScheduleCheckButton); 
+		home_btn.setSize(100,50);
+		home_btn.setLocation(100, 60);
+		home_btn.setBorderPainted(false); //테두리(외곽선) 없앰
+		home_btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
+		home_btn.setContentAreaFilled(false); //영역 채우지 않음
+		frame.add(home_btn); 
+		
+		del_btn.setSize(100,50);
+		del_btn.setLocation(100, 130);
+		del_btn.setBorderPainted(false); //테두리(외곽선) 없앰
+		del_btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
+		del_btn.setContentAreaFilled(false); //영역 채우지 않음
+		frame.add(del_btn); 
+		
+		upd_btn.setSize(100,50);
+		upd_btn.setLocation(100, 200);
+		upd_btn.setBorderPainted(false); //테두리(외곽선) 없앰
+		upd_btn.setFocusPainted(false); //이 선택되었을 때 생기는 테두리 사용 안함
+		upd_btn.setContentAreaFilled(false); //영역 채우지 않음
+		frame.add(upd_btn); 
 			
 		
 		Label1.setOpaque(true);
@@ -137,12 +158,69 @@ public class userListUI extends JFrame{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //창닫기 버튼을 활성화 시켜 X를 누르면 프로그램 종료
 		getContentPane().setBackground(Color.WHITE); // 프레임 bg color
 		
-		ScheduleCheckButton.addActionListener(new ActionListener() {
+		userinfo.addMouseListener(new MouseAdapter() {
+
+//			마우스 클릭시 처리를 담당하는 메소드 재정의
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				row = userinfo.getSelectedRow();
+				int col = userinfo.getSelectedColumn();
+				db_name = (String) userinfo.getModel().getValueAt(row, 0);
+				db_sex = (String) userinfo.getModel().getValueAt(row, 1);
+				db_age = (String) userinfo.getModel().getValueAt(row, 2);
+				db_num = (String) userinfo.getModel().getValueAt(row, 3);
+				db_num = db_num.replace("-", "");
+				db_day = (String) userinfo.getModel().getValueAt(row, 4);
+				db_day = db_day.replace("일", "");
+				db_day1 = Integer.parseInt(db_day);
+			}
+		});
+		
+		home_btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JButton b = (JButton)e.getSource();
+				//로그인 버튼
+				frame.setVisible(false);
+				new startUI();
+			}
+		});
+		
+		del_btn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int reply = JOptionPane.showConfirmDialog(null, "ID : " + db_name + "회원을 삭제 하시겠습니까?", "회원 삭제", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+				if (reply == JOptionPane.YES_OPTION)
+				{
+					int deleteCount = db.userdel(db_name);
+					//List<Role> list = db.getRoles();
+					System.out.println(deleteCount);
+					tableModel.removeRow(row); 
+					JOptionPane.showMessageDialog(null, "삭제가 완료되었습니다..", "삭제성공", JOptionPane.INFORMATION_MESSAGE);
+				}
 				
-				JOptionPane.showMessageDialog(null, "미구현 기능입니다.", "안내", JOptionPane.WARNING_MESSAGE);
-				//트레이너 프로필 조회 버튼
+				else
+				{
+					JOptionPane.showMessageDialog(null, "삭제를 취소했습니다.", "회원 삭제 취소", JOptionPane.INFORMATION_MESSAGE);
+				}
+					
+			}
+		});
+		
+		upd_btn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int reply = JOptionPane.showConfirmDialog(null, "ID : " + db_name + "회원의 정보를 수정 하시겠습니까?", "회원 정보 수정", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+				if (reply == JOptionPane.YES_OPTION)
+				{
+					int updateCount = db.userupd(db_name, db_sex, db_age, db_num, db_day1);
+					//List<Role> list = db.getRoles();
+					System.out.println(updateCount);
+					tableModel.fireTableRowsUpdated(row, 0);
+					JOptionPane.showMessageDialog(null, "수정을 완료했습니다..", "회원 정보 수정 완료", JOptionPane.INFORMATION_MESSAGE);
+				}
+				
+				else
+				{
+					JOptionPane.showMessageDialog(null, "수정을 취소했습니다.", "회원 정보 수정 취소", JOptionPane.INFORMATION_MESSAGE);
+				}
+					
 			}
 		});
 		

@@ -1,0 +1,46 @@
+package control;
+
+import java.sql.*;
+
+public class buyticket {
+	
+	Statement stmt = null;
+	Connection con = null;
+	
+	public buyticket() {   // 엑세스와 연결하는 메소드
+		// TODO Auto-generated method stub
+		String databaseURL = "jdbc:ucanaccess://Database1.accdb";
+
+		
+		try {
+			con = DriverManager.getConnection(databaseURL);
+			stmt = con.createStatement();
+			
+			System.out.print("Connect");
+		}	catch(SQLException e) {
+			e.printStackTrace();
+			System.out.print("UnConnect");
+		}
+	}
+
+	
+	public int user_day(int day, String _u)
+	{
+		String sql = "UPDATE UserInfo123 SET daysRemaining = daysRemaining + ? WHERE UserName = ?";
+		
+		PreparedStatement ps = null;	
+		try {
+			
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, day);
+			ps.setString(2, _u);
+			ps.executeUpdate();
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("실패 > " + e.toString());
+		}
+		
+	}
+}

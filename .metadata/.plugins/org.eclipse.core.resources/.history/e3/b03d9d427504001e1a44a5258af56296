@@ -1,0 +1,45 @@
+package control;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class deleteUser {
+	
+	Statement stmt = null;
+	Connection con = null;
+	
+	public deleteUser() {   // 엑세스와 연결하는 메소드
+		// TODO Auto-generated method stub
+		String databaseURL = "jdbc:ucanaccess://Database1.accdb";
+
+		
+		try {
+			con = DriverManager.getConnection(databaseURL);
+			stmt = con.createStatement();
+			
+			System.out.print("Connect");
+		}	catch(SQLException e) {
+			e.printStackTrace();
+			System.out.print("UnConnect");
+		}
+	}
+	public int userdel(String roleId)
+	{
+		int deleteCount = 0;
+		
+		
+		try {
+			String sql = "delete from user where userId = ?";			
+			PreparedStatement ps = con.prepareStatement(sql);			
+			ps.setString(1, roleId);			
+			deleteCount = ps.executeUpdate();	
+			
+		} catch(Exception e) {
+			System.out.println("실패 > " + e.toString());
+		}
+			
+		return deleteCount;
+	}
+}

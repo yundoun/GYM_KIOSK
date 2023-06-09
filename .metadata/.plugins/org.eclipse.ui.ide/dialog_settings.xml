@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\23\GYM_KIOSK-main"/>
 			<item value="D:\GYM_KIOSK-main\src"/>
 			<item value="D:\GYM_KIOSK-main\src\boundary"/>
 			<item value="D:\GYM_KIOSK-main"/>

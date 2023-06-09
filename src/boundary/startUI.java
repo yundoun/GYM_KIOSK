@@ -86,10 +86,10 @@ public class startUI {
 		
 		managerbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				frame.setVisible(false);
 //				new memberLoginUI();
-				new managerModeUI();
-				
+				//new managerModeUI();
+				frame.setVisible(false);
+				new memberLoginUI();
 
 				
 			}

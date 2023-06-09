@@ -9,7 +9,7 @@ import Btn_Design.*;
 
 // 회원 로그인
 public class lockerUI {
-	
+	static int lockercount = 0;
 	public lockerUI() {
 		RoundedButton one = new RoundedButton("1");
 		RoundedButton two = new RoundedButton("2");
@@ -153,6 +153,7 @@ public class lockerUI {
 		one.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				lockercount = 1;
 				new paymentUI();
 			}
 		});
@@ -160,6 +161,7 @@ public class lockerUI {
 		two.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				lockercount = 2;
 				new paymentUI();
 			}
 		});
@@ -167,6 +169,7 @@ public class lockerUI {
 		three.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				lockercount = 3;
 				new paymentUI();
 			}
 		});
@@ -174,6 +177,7 @@ public class lockerUI {
 		four.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				lockercount = 4;
 				new paymentUI();
 			}
 		});
@@ -181,6 +185,7 @@ public class lockerUI {
 		five.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				lockercount = 5;
 				new paymentUI();
 			}
 		});
@@ -188,6 +193,7 @@ public class lockerUI {
 		six.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				lockercount = 6;
 				new paymentUI();
 			}
 		});
@@ -195,6 +201,7 @@ public class lockerUI {
 		seven.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				lockercount = 7;
 				new paymentUI();
 			}
 		});
@@ -202,6 +209,7 @@ public class lockerUI {
 		eight.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				lockercount = 8;
 				new paymentUI();
 			}
 		});
@@ -209,6 +217,7 @@ public class lockerUI {
 		nine.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				lockercount = 9;
 				new paymentUI();
 			}
 		});

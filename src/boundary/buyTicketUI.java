@@ -9,8 +9,10 @@ import Btn_Design.*;
 
 // 회원 로그인
 public class buyTicketUI {
-	
+		static int daycheck = 0;
 	public buyTicketUI() {
+		
+		
 		RoundedButton mon1btn = new RoundedButton("1개월");
 		RoundedButton mon3btn = new RoundedButton("3개월");
 		RoundedButton mon6btn = new RoundedButton("6개월");
@@ -155,6 +157,7 @@ public class buyTicketUI {
 		mon1btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				daycheck = 30;
 				new lockerUI();
 			}
 		});
@@ -162,6 +165,7 @@ public class buyTicketUI {
 		mon3btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				daycheck = 90;
 				new lockerUI();
 			}
 		});
@@ -169,14 +173,15 @@ public class buyTicketUI {
 		mon6btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				daycheck = 180;
 				new lockerUI();
 			}
 		});
 		
 		mon12btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-	
 				frame.setVisible(false);
+				daycheck = 360;
 				new lockerUI();
 			}
 		});
@@ -184,6 +189,7 @@ public class buyTicketUI {
 		no1btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				daycheck = 1;
 				new lockerUI();	
 			}
 		});
@@ -191,6 +197,7 @@ public class buyTicketUI {
 		no3btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				daycheck = 3;
 				new lockerUI();
 				
 			}
@@ -199,6 +206,7 @@ public class buyTicketUI {
 		no10btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				daycheck = 10;
 				new lockerUI();
 			}
 		});
@@ -206,6 +214,7 @@ public class buyTicketUI {
 		no20btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
+				daycheck = 20;
 				new lockerUI();
 			}
 		});
