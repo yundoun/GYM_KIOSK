@@ -47,6 +47,12 @@ public class memberLoginUI {
 		return guideLabel;
 	}
 	
+	public void showDialog(String s1, String s2, int opt ) {
+	      if(opt == 1)
+	         JOptionPane.showMessageDialog(null, s1, s2, JOptionPane.ERROR_MESSAGE);
+	      else
+	         JOptionPane.showMessageDialog(null, s1);
+	   }
 	
 	public memberLoginUI() {
 
@@ -220,13 +226,12 @@ public class memberLoginUI {
 				/* 로그인 버튼 이벤트 */
 				if(b.getText().equals("확인")) {
 					if(upass.equals("")) {
-						JOptionPane.showMessageDialog(null, "비밀번호를 입력해주세요", "로그인 실패", JOptionPane.ERROR_MESSAGE);
+						showDialog("비밀번호를 입력해주세요", "로그인 실패", 1);
 						System.out.println("로그인 실패 > 로그인 정보 미입력");
 					}
 					else if(upass.equals("0000")) {
 						System.out.println("로그인 성공");
-						
-						JOptionPane.showMessageDialog(null, "로그인에 성공하였습니다");
+						showDialog("로그인에 성공하였습니다", "로그인 성공", 0);
 						db.dbclose();
 						new managerModeUI(); //로그인 성공시 자리배치 페이지로 이동
 						frame.setVisible(false);
@@ -236,7 +241,7 @@ public class memberLoginUI {
 						if(db.logincheck(upass)) {	
 							System.out.println("로그인 성공");
 							
-							JOptionPane.showMessageDialog(null, "로그인에 성공하였습니다");
+							showDialog("로그인에 성공하였습니다", "로그인 성공", 0);
 							db.dbclose();
 							new mainUI(); //로그인 성공시 자리배치 페이지로 이동
 							frame.setVisible(false);
@@ -244,7 +249,7 @@ public class memberLoginUI {
 						
 						else {
 							System.out.println("로그인 실패 > 로그인 정보 불일치");
-							JOptionPane.showMessageDialog(null, "로그인에 실패하였습니다");
+							showDialog("비밀번호를 입력해주세요", "로그인 실패", 1);
 						}
 					}
 				}

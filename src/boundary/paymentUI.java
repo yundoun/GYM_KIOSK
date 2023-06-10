@@ -15,6 +15,13 @@ public class paymentUI {
 	int tk = buyTicketUI.daycheck;
 	int lk = lockerUI.lockercount;
 	
+	public void showDialog(String s1, String s2, int opt ) {
+	      if(opt == 1)
+	         JOptionPane.showMessageDialog(null, s1, s2, JOptionPane.ERROR_MESSAGE);
+	      else
+	         JOptionPane.showMessageDialog(null, s1);
+	   }
+	
 	public paymentUI() {
 		
 		JLabel titleLabel = new JLabel("ZYM CARRY");
@@ -117,7 +124,7 @@ public class paymentUI {
 		        	int payCount = td.user_day(buyTicketUI.daycheck,user.getName());
 					//List<Role> list = db.getRoles();
 					System.out.println(payCount);
-		        	 JOptionPane.showMessageDialog(null, "결제가 완료되었습니다 !!");
+					showDialog( "결제가 완료되었습니다 !!", "결제완료", 0);
 		        	 frame.dispose();
 		        	 new startUI();
 		        	
@@ -132,7 +139,7 @@ public class paymentUI {
 		    public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
 				frame.dispose();
-				JOptionPane.showMessageDialog(null, "처음으로 돌아갑니다.", "안내", JOptionPane.WARNING_MESSAGE);
+				showDialog( "처음으로 돌아갑니다.", "안내", 0);
 				new mainUI();
 		    }
 		});

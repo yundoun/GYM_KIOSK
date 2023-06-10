@@ -48,6 +48,14 @@ public class userListUI extends JFrame{
 	         return ppdays;
 	      }
 	   }
+	
+	public void showDialog(String s1, String s2, int opt ) {
+	      if(opt == 1)
+	         JOptionPane.showMessageDialog(null, s1, s2, JOptionPane.ERROR_MESSAGE);
+	      else
+	         JOptionPane.showMessageDialog(null, s1);
+	   }
+	
 	public userListUI() {
 		String[] colName = { "이름", "성별", "나이", "전화번호", "남은이용권기간", "담당트레이너" }; //회원 정보를 나타낼 열 값
 		tableModel = new DefaultTableModel(colName, 0);
@@ -196,12 +204,12 @@ public class userListUI extends JFrame{
 					//List<Role> list = db.getRoles();
 					System.out.println(deleteCount);
 					tableModel.removeRow(row); 
-					JOptionPane.showMessageDialog(null, "삭제가 완료되었습니다..", "삭제성공", JOptionPane.INFORMATION_MESSAGE);
+					showDialog("삭제가 완료되었습니다 ! ", "삭제성공", 0);
 				}
 				
 				else
 				{
-					JOptionPane.showMessageDialog(null, "삭제를 취소했습니다.", "회원 삭제 취소", JOptionPane.INFORMATION_MESSAGE);
+					showDialog("삭제를 취소했습니다.", "회원 삭제 취소", 0);
 				}
 					
 			}
@@ -216,12 +224,12 @@ public class userListUI extends JFrame{
 					//List<Role> list = db.getRoles();
 					System.out.println(updateCount);
 					tableModel.fireTableRowsUpdated(row, 0);
-					JOptionPane.showMessageDialog(null, "수정을 완료했습니다..", "회원 정보 수정 완료", JOptionPane.INFORMATION_MESSAGE);
+					showDialog("수정을 완료했습니다..", "회원 정보 수정 완료", 0);
 				}
 				
 				else
 				{
-					JOptionPane.showMessageDialog(null, "수정을 취소했습니다.", "회원 정보 수정 취소", JOptionPane.INFORMATION_MESSAGE);
+					showDialog("수정을 취소했습니다.", "회원 정보 수정 취소", 0);
 				}
 					
 			}

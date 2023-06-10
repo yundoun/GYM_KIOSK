@@ -93,8 +93,6 @@ public class startUI {
 				//new managerModeUI();
 				frame.setVisible(false);
 				new memberLoginUI();
-
-				
 			}
 		});
 		

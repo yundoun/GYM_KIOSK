@@ -10,12 +10,17 @@ import javax.swing.border.LineBorder;
 
 
 
-
 // 회원 로그인
 public class registerNewMemberUI {
 	registerSystem db = new registerSystem();
-	
 
+	public void showDialog(String s1, String s2, int opt ) {
+		if(opt == 1)
+			JOptionPane.showMessageDialog(null, s1, s2, JOptionPane.ERROR_MESSAGE);
+		else
+			JOptionPane.showMessageDialog(null, s1);
+	}
+	
 	public registerNewMemberUI() {
 		
 		String UserName;
@@ -175,7 +180,8 @@ public class registerNewMemberUI {
 				if(b.getText().equals("확인")) {
 					if(uname.equals("") || usex.equals("") || uyear.equals("") || uphone.equals(""))
 					{
-						JOptionPane.showMessageDialog(null, "모든 정보를 기입해주세요", "회원가입 실패", JOptionPane.ERROR_MESSAGE);
+						showDialog("모든 정보를 기입해주세요", "회원가입 실패", 1);
+						//JOptionPane.showMessageDialog(null, "모든 정보를 기입해주세요", "회원가입 실패", JOptionPane.ERROR_MESSAGE);
 						System.out.println("회원가입 실패 > 회원정보 미입력");
 					}
 					
@@ -185,7 +191,8 @@ public class registerNewMemberUI {
 							// 카드번호 전화번호가 존재하는지를 먼저 판별하고 회원 가입하기.		
 							if((!(uphone.length() == 11)))
 							{
-								JOptionPane.showMessageDialog(null, "전화번호는 11자리로 입력하세요.");
+								showDialog("전화번호는 11자리로 입력하세요", "", 0);
+								//JOptionPane.showMessageDialog(null, "전화번호는 11자리로 입력하세요.");
 							}
 							
 							else
@@ -193,7 +200,7 @@ public class registerNewMemberUI {
 								if(db.registerUser(uname, usex, uyear, uphone)) {
 
 										System.out.println("회원가입 성공");
-										JOptionPane.showMessageDialog(null, "회원가입 성공!");
+										showDialog("회원가입 성공!", "", 0);
 										db.dbclose();
 										frame.setVisible(false);
 										frame.dispose();
@@ -202,7 +209,7 @@ public class registerNewMemberUI {
 								
 								else {
 									System.out.println("회원가입 실패");
-									JOptionPane.showMessageDialog(null, "회원가입 실패");
+									showDialog("회원가입 실패", "", 0);
 									nameTextField.setText("");
 									}
 							

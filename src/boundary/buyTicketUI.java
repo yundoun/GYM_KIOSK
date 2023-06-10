@@ -8,6 +8,8 @@ import javax.swing.*;
 // 회원 로그인
 public class buyTicketUI {
 		static int daycheck = 0;
+		
+		
 	public buyTicketUI() {
 		
 		JButton mon1btn = new JButton("1개월");
