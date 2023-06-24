@@ -68,7 +68,7 @@
 
 
 
-#### 발표자료 ▼
+## 발표자료 
 https://drive.google.com/file/d/1bo-Do4hCn1QmLDd77bCEhzMc5g5SjAUO/view?usp=sharing
 
 
